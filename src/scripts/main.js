@@ -1,4 +1,5 @@
 import { Header } from "../components/Header"
+import "../styles/main.css"
 
 const app = document.getElementById("app")
 
@@ -91,6 +92,7 @@ async function getAllProducts() {
     throw new Error("Internal Server Error", error)
   }
 }
+
 
 async function removeFromFavorites() {
   try {
