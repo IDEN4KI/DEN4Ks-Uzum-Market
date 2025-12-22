@@ -14,8 +14,11 @@ export const Header = `
           <a id="header-link-third" href="#">Стать продавцом</a>
           <span id="palka">|</span>
           <a id="header-link-fouth" href="#">Открыть пункт выдачи</a>
+          <span id="palka2">|</span>
           <a id="header-link-fifth" href="#">Вопрос-ответ</a>
+          <span id="palka2">|</span>
           <a id="header-link-sixth" href="#">Мои заказы</a>
+          <span id="palka2">|</span>
 
           <div id="divchik">
             <img id="russia" src="public/icons/free-icon-russia-197408.png" alt="russia">
@@ -29,7 +32,7 @@ export const Header = `
         <div id="header-middle-left">
           <img src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
           <div id="midale">
-            <img src="public/icons/Screenshot_3.jpg" alt="ya xz" id="midale-icon">
+            <img src="public/icons/Screenshot_3.png" alt="ya xz" id="midale-icon">
             <button id="catalog-btn">Каталог</button>
           </div>
         </div>
@@ -42,7 +45,7 @@ export const Header = `
         </div>
 
         <div id="header-middle-right">
-          <div id="login-btn">
+          <div id="login-btn"> 
             <img id="icon" src="public/icons/free-icon-user-icon-4360835.png" alt="login">
             <a href="#">Данил</a>
           </div>
@@ -57,7 +60,55 @@ export const Header = `
         </div>
       </section>
 
-      <section id="header-bottom"></section>
+      <section id="header-bottom">
+        <div id="categories">
+          <img id="header-bottom-icon" src="public/icons/free-icon-flame-4535728.png" alt="fire">
+          <a id="aa" href="#">Товары недели</a>
+        </div>
+
+        <div id="categories">
+          <img id="header-bottom-icon" src="public/icons/free-icon-jacket-5987724.png" alt="collection">
+          <a id="aa" href="#">Зимняя коллекция</a>
+        </div>
+
+        <div id="categories">
+          <img id="header-bottom-icon" src="public/icons/free-icon-lipstick-8167676.png" alt="fashion">
+          <a id="aa" href="#">Ваша красота</a>
+        </div>
+
+        <div id="categories">
+          <img id="header-bottom-icon" src="public/icons/free-icon-spanish-guitar-262421.png" alt="hobby">
+          <a id="aa" href="#">Хобби и творчество</a>
+        </div>
+
+        <div id="categories">
+          <img id="header-bottom-icon" src="public/icons/free-icon-phone-11970327.png" alt="phones">
+          <a id="aa" href="#">Смартфоны</a>
+        </div>
+
+        <div id="categories2">
+          <div id="poloska-nevedimka"></div>
+          <a id="aaa" href="#">Туризм,рыбалка и охота</a>
+          <div id="poloska"></div>
+        </div>
+
+        <div id="categories2">
+          <div id="poloska-nevedimka"></div>
+          <a id="aaa" href="#">Электроника</a>
+          <div id="poloska"></div>
+        </div>
+
+        <div id="categories2">
+          <div id="poloska-nevedimka"></div>
+          <a id="aaa" href="#">Бытовая техника</a>
+          <div id="poloska"></div>
+        </div>
+
+        <div id="categories">
+          <a id="aaa" href="#">Ещё</a>
+          <img id="arrow2" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
+        </div>
+      </section>
     </div> 
   </header>
 
@@ -82,6 +133,22 @@ export const Header = `
         color: var(--black-a15);
       }
 
+      #palka2{
+        color: var(--gray-95);
+      }
+
+      #poloska{
+        height: 2px;
+        background-color: var(--black-a95);
+        width: 100%;
+      }
+
+      #poloska-nevedimka{
+        height: 2px;
+        background-color: white;
+        width: 100%;
+      }
+
       .wrapper{
         display: flex;
         flex-direction: column;
@@ -92,6 +159,7 @@ export const Header = `
 
       #map-tracker{
         width: 3%;
+
       }
 
       #search-icon{
@@ -108,11 +176,15 @@ export const Header = `
         border-radius: 0 5px 5px 0;
         border-left: none;
         cursor: pointer;
-        background-color: #edeff2;
+        background-color: var(--gray-95);
       }
 
       #arrow{
         width: 1.5%;
+      }
+
+      #arrow2{
+        width: 5%;
       }
 
       #russia{
@@ -120,11 +192,11 @@ export const Header = `
       }
 
       #header-link-first{
-        color: black
+        color: var(--black-a95);
       }
 
       #header-link-second{
-        color: #2a2b33;
+        color: var(--black-a85);
         margin-left: 15px;
       }
 
@@ -132,17 +204,32 @@ export const Header = `
         color: var(--violet-55);
       }
 
+      #header-link-third:hover{
+        color: var(--violet-45);
+      }
+
       #header-link-fouth{
         color: var(--violet-55);
+      }
+
+      #header-link-fouth:hover{
+        color: var(--violet-45);
       }
 
       #header-link-fifth{
         color: var(--black-a55);
       }
 
+      #header-link-fifth:hover{
+        color: var(--black-a75);
+      }
+
       #header-link-sixth{
         color: var(--black-a55);
+      }
 
+      #header-link-sixth:hover{
+        color: var(--black-a75);
       }
 
       #icon{
@@ -165,6 +252,7 @@ export const Header = `
         width: 100%;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
       }
 
       #button{
@@ -178,6 +266,37 @@ export const Header = `
 
       a{
         text-decoration: none;
+        
+      }
+
+      #aa{
+        color: var(--black-a95);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+    #aaa{
+        color: var(--black-a60);
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      #categories{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center; 
+        gap: 5px; 
+      }
+
+      #categories2{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #header-bottom-icon{
+        width: 11%;
       }
 
       #divchik{
@@ -190,7 +309,7 @@ export const Header = `
       }
 
       #header-top{
-        background-color: #edeff2;
+        background-color: var(--gray-95);
         display: flex;
         height: 30px;
         display: flex;
@@ -202,6 +321,35 @@ export const Header = `
         width: 100%;
       }
 
+      #header-bottom{
+        display: flex;
+        height: 30px;
+        width: 96%;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+      }
+
+      #header-bottom #categories{
+        display: flex;
+        height: 30px;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+
+      }
+
+      #header-bottom #categories2{
+        display: flex;
+        height: 30px;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+
+      }
+
       #midale{
         display: flex;
         align-items: center;
@@ -209,6 +357,15 @@ export const Header = `
         padding: 3px;
         background: var(--uzum-violet-95);
         cursor: pointer;
+      }
+
+      #midale:hover{
+        background: var(--uzum-violet-90);
+        transition-duration: 0.3s;
+      #catalog-btn{
+        background: var(--uzum-violet-90);
+        transition-duration: 0.3s;
+      }
       }
 
       #midale-icon{
@@ -291,32 +448,49 @@ export const Header = `
         display: flex;
         align-items: center;
         width: 100%;
-        margin-right: 15px;
         justify-content: space-around;
       }
 
       #login-btn{
         display: flex;
         gap: 10px;
-        margin-left: 40px;
         cursor: pointer;
+        align-items: center;
+        justify-content: center; 
 
+      }
+
+      #login-btn:hover{
+        background: var(--black-a10);
+        border-radius:5px;
       }
 
       #favorite-btn{
         display: flex;
         gap: 10px;
-        margin-right: 20px;
         cursor: pointer;
+        align-items: center;
+        justify-content: center; 
+        height: 42px;
+      }
 
+      #favorite-btn:hover{
+        background: var(--black-a10);
+        border-radius:5px;
+        
       }
 
       #cart-btn{
         display: flex;
         gap: 10px;
-        margin-right: 25px;
         cursor: pointer;
+        align-items: center;
+        justify-content: center; 
+      }
 
+      #cart-btn:hover{
+        background: var(--black-a10);
+        border-radius:5px;
       }
     </style>
 `;
