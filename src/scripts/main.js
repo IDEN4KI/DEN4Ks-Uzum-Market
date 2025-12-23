@@ -1,12 +1,43 @@
 import { Header } from "../components/Header"
 import "../styles/main.css"
 
+import Swiper from 'swiper';
+
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import 'swiper/css';
+
+
 const app = document.getElementById("app")
 
 app.innerHTML = `
   ${Header}
   
+    <div class="swiper">
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
+      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-scrollbar"></div>
+  </div>
 `
+
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Pagination],
+
+})
 
 async function getData() {
   try {

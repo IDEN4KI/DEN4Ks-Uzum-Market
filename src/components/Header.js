@@ -1,24 +1,24 @@
 export const Header = `
   <header>
-    <div class="wrapper">
+
       <section id="header-top">
-        <div id="header-top-left">
-          <div id="header-top-left-inside">
-            <img id="map-tracker" src="public/icons/free-icon-location-pin-2776077.png" alt="map-tracker">
-            <a id="header-link-first" href="#">Самарканд</a>
-            <img id="arrow" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
-            <a id="header-link-second" href="#">Пункты выдачи</a>
+          <div id="header-top-left">
+            <div id="header-top-left-inside">
+              <img id="map-tracker" src="public/icons/free-icon-location-pin-2776077.png" alt="map-tracker">
+              <a id="header-link-first" href="#">Самарканд</a>
+              <img id="arrow" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
+              <a id="header-link-second" href="#">Пункты выдачи</a>
+            </div>
           </div>
-        </div>
-        <div id="header-top-right">
-          <a id="header-link-third" href="#">Стать продавцом</a>
-          <span id="palka">|</span>
-          <a id="header-link-fouth" href="#">Открыть пункт выдачи</a>
-          <span id="palka2">|</span>
-          <a id="header-link-fifth" href="#">Вопрос-ответ</a>
-          <span id="palka2">|</span>
-          <a id="header-link-sixth" href="#">Мои заказы</a>
-          <span id="palka2">|</span>
+          <div id="header-top-right">
+            <a id="header-link-third" href="#">Стать продавцом</a>
+            <span id="palka">|</span>
+            <a id="header-link-fouth" href="#">Открыть пункт выдачи</a>
+            <span id="palka2">|</span>
+            <a id="header-link-fifth" href="#">Вопрос-ответ</a>
+            <span id="palka2">|</span>
+            <a id="header-link-sixth" href="#">Мои заказы</a>
+            <span id="palka2">|</span>
 
           <div id="divchik">
             <img id="russia" src="public/icons/free-icon-russia-197408.png" alt="russia">
@@ -28,6 +28,7 @@ export const Header = `
         </div>
       </section>
 
+       <div class="wrapper">
       <section id="header-middle">
         <div id="header-middle-left">
           <img src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
@@ -47,7 +48,7 @@ export const Header = `
         <div id="header-middle-right">
           <div id="login-btn"> 
             <img id="icon" src="public/icons/free-icon-user-icon-4360835.png" alt="login">
-            <a href="#">Данил</a>
+            <a href="#">Логин</a>
           </div>
           <div id="favorite-btn">
             <img id="icon" src="public/icons/free-icon-favorite-13426236.png" alt="login">
@@ -60,56 +61,58 @@ export const Header = `
         </div>
       </section>
 
-      <section id="header-bottom">
-        <div id="categories">
+      <ul id="header-bottom">
+        <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-flame-4535728.png" alt="fire">
           <a id="aa" href="#">Товары недели</a>
-        </div>
+        </li>
 
-        <div id="categories">
+        <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-jacket-5987724.png" alt="collection">
           <a id="aa" href="#">Зимняя коллекция</a>
-        </div>
+        </li>
 
-        <div id="categories">
+        <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-lipstick-8167676.png" alt="fashion">
           <a id="aa" href="#">Ваша красота</a>
-        </div>
+        </li>
 
-        <div id="categories">
+        <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-spanish-guitar-262421.png" alt="hobby">
           <a id="aa" href="#">Хобби и творчество</a>
-        </div>
+        </li>
 
-        <div id="categories">
+        <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-phone-11970327.png" alt="phones">
           <a id="aa" href="#">Смартфоны</a>
-        </div>
+        </li>
 
-        <div id="categories2">
+        <li id="categories2">
           <div id="poloska-nevedimka"></div>
           <a id="aaa" href="#">Туризм,рыбалка и охота</a>
           <div id="poloska"></div>
-        </div>
+        </li>
 
-        <div id="categories2">
+        <li id="categories2">
           <div id="poloska-nevedimka"></div>
           <a id="aaa" href="#">Электроника</a>
           <div id="poloska"></div>
-        </div>
+        </li>
 
-        <div id="categories2">
+        <li id="categories2">
           <div id="poloska-nevedimka"></div>
           <a id="aaa" href="#">Бытовая техника</a>
           <div id="poloska"></div>
-        </div>
+        </li>
 
-        <div id="categories">
+        <li id="categories3">
           <a id="aaa" href="#">Ещё</a>
           <img id="arrow2" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
-        </div>
-      </section>
+        </li>
+      </ul>
     </div> 
+
+    
   </header>
 
     <style>
@@ -140,7 +143,19 @@ export const Header = `
       #poloska{
         height: 2px;
         background-color: var(--black-a95);
-        width: 100%;
+        width: 0%;
+      }
+
+      #categories2:hover{
+        #aaa{
+          color: var(--black-a80);
+        }
+        #poloska{
+          transition-duration: 0.4s;
+          height: 2px;
+          background-color: var(--black-a95);
+          width: 100%;
+        }
       }
 
       #poloska-nevedimka{
@@ -184,7 +199,7 @@ export const Header = `
       }
 
       #arrow2{
-        width: 5%;
+        width: 10%;
       }
 
       #russia{
@@ -249,6 +264,7 @@ export const Header = `
       
       header{
         display: flex;
+        flex-direction: column; 
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -289,10 +305,25 @@ export const Header = `
         gap: 5px; 
       }
 
+      #categories3{
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center; 
+        gap: 5px; 
+        margin-left: 10px;
+      }
+
+      #categories3 :hover{
+        color: var(--black-a80);
+      }
+
       #categories2{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        margin-right: 20px;
+        gap: 5px;
+        cursor: pointer; 
       }
 
       #header-bottom-icon{
@@ -313,9 +344,9 @@ export const Header = `
         display: flex;
         height: 30px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 0 24px;
+        padding: 0 16.1%;
         font-size: 15px;
         font-weight: 440;
         width: 100%;
@@ -324,10 +355,11 @@ export const Header = `
       #header-bottom{
         display: flex;
         height: 30px;
-        width: 96%;
+        width: 99%;
         align-items: center;
         justify-content: center;
         justify-content: space-around;
+
       }
 
       #header-bottom #categories{
