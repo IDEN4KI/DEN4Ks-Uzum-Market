@@ -10,6 +10,8 @@ import 'swiper/css/pagination';
 
 import 'swiper/css';
 
+import { Autoplay } from 'swiper/modules';
+
 
 const app = document.getElementById("app")
 
@@ -21,7 +23,7 @@ app.innerHTML = `
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
       <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
-      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
     </div>
 
     <div class="swiper-pagination"></div>
@@ -35,7 +37,29 @@ app.innerHTML = `
 `
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination, Autoplay],
+
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+
+  speed: 800,
+
+
+
 
 })
 

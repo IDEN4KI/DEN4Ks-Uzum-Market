@@ -5,3 +5,20 @@
 
 }
 
+.swiper {
+
+  width: 67%;
+  height: 20%;
+  cursor: pointer;
+
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-size: 5px;
+
+
+  --swiper-navigation-color: black;
+  --swiper-navigation-size: 25px;
+
+}
+
+
+
