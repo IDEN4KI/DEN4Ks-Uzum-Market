@@ -167,7 +167,7 @@ export const Header = `
       .wrapper{
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 69%;
         align-items: center;
         justify-content: center;
       }
@@ -346,7 +346,7 @@ export const Header = `
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 16.1%;
+        padding: 0 16.5%;
         font-size: 15px;
         font-weight: 440;
         width: 100%;
@@ -355,10 +355,9 @@ export const Header = `
       #header-bottom{
         display: flex;
         height: 30px;
-        width: 99%;
+        width: 100%;
         align-items: center;
         justify-content: center;
-        justify-content: space-around;
 
       }
 
@@ -368,7 +367,7 @@ export const Header = `
         width: 80%;
         align-items: center;
         justify-content: center;
-        margin-left: 30px;
+
 
       }
 
@@ -378,7 +377,6 @@ export const Header = `
         width: 20%;
         align-items: center;
         justify-content: center;
-        margin-left: 20px;
 
       }
 
@@ -450,7 +448,7 @@ export const Header = `
 
       #logo {
         height: 32px;
-        margin-left: 40px;
+        margin-left: 20px;
         cursor: pointer;
       }
 
@@ -465,7 +463,6 @@ export const Header = `
 
       #header-top-left{
         display: flex;
-        margin-left: 15px;
         justify-content: space-around;
       }
 

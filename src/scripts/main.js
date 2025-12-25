@@ -21,9 +21,37 @@ app.innerHTML = `
     <div class="swiper">
 
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
-      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
-      <div class="swiper-slide"><img src="public/icons/free-icon-flame-4535728.png"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_32-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_31-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_30.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_29-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_28-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_27-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_26.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_25-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_24.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_23.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_22-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_21-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_20.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_19-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_18.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_17-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_16.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_15.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_14.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_13.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_12.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_11.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_10.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_9-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_8.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_7.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_6-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_5-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshoot_4.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_3-Photoroom.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_1.jpg"></div>
     </div>
 
     <div class="swiper-pagination"></div>
@@ -41,6 +69,8 @@ const swiper = new Swiper('.swiper', {
 
   loop: true,
 
+  spaceBetween: 0,
+
   pagination: {
     el: '.swiper-pagination',
   },
@@ -54,9 +84,10 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
+    speed: 2000,
   },
 
-  speed: 800,
+  
 
 
 
