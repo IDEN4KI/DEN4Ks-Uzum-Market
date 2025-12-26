@@ -40,6 +40,38 @@
 
 }
 
+#under-swiper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  gap: 15px;
+  margin-top: 20px;
+}
 
+#under-swiper-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-95);
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+  gap: 15px;
+  font-size: 10px;
+}
 
+#under-swiper-section:hover{
+  background-color: var(--gray-90);
+  transition-duration: 0.4s;
+}
 
+#im{
+  width: 10%;
+}
+
+#aaaa{
+  color: var(--black-a95);
+  font-size: 15px;
+  font-weight: 500;
+}

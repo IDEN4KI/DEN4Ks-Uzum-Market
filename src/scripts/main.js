@@ -23,7 +23,6 @@ app.innerHTML = `
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="public/images/Screenshot_32-Photoroom.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_31-Photoroom.jpg"></div>
-      <div class="swiper-slide"><img src="public/images/Screenshot_30.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_29-Photoroom.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_28-Photoroom.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_27-Photoroom.jpg"></div>
@@ -44,6 +43,7 @@ app.innerHTML = `
       <div class="swiper-slide"><img src="public/images/Screenshot_12.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_11.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_10.jpg"></div>
+      <div class="swiper-slide"><img src="public/images/Screenshot_30.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_9-Photoroom.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_8.jpg"></div>
       <div class="swiper-slide"><img src="public/images/Screenshot_7.jpg"></div>
@@ -62,6 +62,97 @@ app.innerHTML = `
 
     <div class="swiper-scrollbar"></div>
   </div>
+
+  <section id="under-swiper">
+    <div id="under-swiper-section">
+      <img id="im" src="public/icons/free-icon-teddy-bear-620744.png" alt="teddy">
+      <a id="aaaa" href="#">Детский мир</a>
+    </div>
+
+    <div id="under-swiper-section">
+      <img id="im" src="public/icons/free-icon-tick-11708440.png" alt="prises">
+      <a id="aaaa" href="#">Гарантия низких цен</a>
+    </div>
+
+    <div id="under-swiper-section">
+      <img id="im" src="public/icons/free-icon-summer-clothing-7707925.png" alt="clouth">
+      <a id="aaaa" href="#">Модный базар</a>
+    </div>
+
+    <div id="under-swiper-section">
+      <img id="im" src="public/icons/free-icon-christmas-tree-3699499.png" alt="elka">
+      <a id="aaaa" href="#">Новый год</a>
+    </div>
+  </section>
+
+    <section id="recomended">
+      <a id="aaaaa" href="#">Рекомендуем</a>
+
+      <ul id="recomended-section">
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+          
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+      </ul>
+
+      <ul id="recomended-section">
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+      </ul>
+
+      <ul id="recomended-section">
+        <li id="recomended-section-li">
+          
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li">
+          
+        </li>
+
+        <li id="recomended-section-li">
+
+        </li>
+
+        <li id="recomended-section-li"></li>
+      </ul>
+
+    </section>
 `
 
 const swiper = new Swiper('.swiper', {
