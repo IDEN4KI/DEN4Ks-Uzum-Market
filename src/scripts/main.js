@@ -1,4 +1,5 @@
 import { Header } from "../components/Header"
+import { ProductsSection } from "../components/ProductsSection";
 import "../styles/main.css"
 
 import Swiper from 'swiper';
@@ -86,70 +87,18 @@ app.innerHTML = `
   </section>
 
     <section id="recomended">
-      <a id="aaaaa" href="#">Рекомендуем</a>
+      <h1>Рекомендуем</h1>
 
       <ul id="recomended-section">
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-          
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
+        ${ProductsSection}
       </ul>
 
       <ul id="recomended-section">
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
+        ${ProductsSection}
       </ul>
 
       <ul id="recomended-section">
-        <li id="recomended-section-li">
-          
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li">
-          
-        </li>
-
-        <li id="recomended-section-li">
-
-        </li>
-
-        <li id="recomended-section-li"></li>
+        ${ProductsSection}
       </ul>
 
     </section>

@@ -54,7 +54,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--gray-95);
-  border-radius: 20px;
+  border-radius: 15px;
   height: 60px;
   cursor: pointer;
   gap: 15px;
@@ -74,4 +74,45 @@
   color: var(--black-a95);
   font-size: 15px;
   font-weight: 500;
+}
+
+#aaaaa{
+  color: var(--black-a95);
+}
+
+#recomended{
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#recomended-section{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#recomended-section-item{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#item-img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+#recomended-section-item:hover{
+  #item-img{
+    size: 200px;
+  }
+
 }
