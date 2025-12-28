@@ -144,6 +144,7 @@ export const Header = `
         height: 2px;
         background-color: var(--black-a95);
         width: 0%;
+        transition: 0.5s;
       }
 
       #categories2:hover{
@@ -151,7 +152,7 @@ export const Header = `
           color: var(--black-a80);
         }
         #poloska{
-          transition-duration: 0.4s;
+          
           height: 2px;
           background-color: var(--black-a95);
           width: 100%;

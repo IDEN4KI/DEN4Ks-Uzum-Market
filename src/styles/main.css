@@ -59,11 +59,12 @@
   cursor: pointer;
   gap: 15px;
   font-size: 10px;
+  transition: 0.4s;
 }
 
 #under-swiper-section:hover{
   background-color: var(--gray-90);
-  transition-duration: 0.4s;
+  
 }
 
 #im{
@@ -93,6 +94,7 @@
   list-style: none;
   justify-content: space-between;
   gap: 20px;
+
 }
 
 #recomended-section-item{
@@ -100,19 +102,51 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: black;
+  justify-content: space-between;
+  background-color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: 0.4s;
 }
 
 #item-img{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
+  transition: 0.4s;
 }
 
 #recomended-section-item:hover{
+  box-shadow:  0px 0px 10px 10px var(--gray-99);
+  
   #item-img{
-    size: 200px;
+    transform: scale(1.03);
   }
 
+}
+
+#item-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--violet-55);
+  height: 10%;
+  gap: 1%;
+  transition: 0.4s;
+}
+
+#item-button:hover{
+  background-color: var(--violet-60);
+  
+}
+
+#item-button-text{
+  color: white;
+  font-weight: 500;
+}
+
+#item-button-img{
+  width: 8%;
 }

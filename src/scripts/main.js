@@ -290,3 +290,6 @@ removeFromFavorites()
 addToCart()
 getAllProducts()
 getUserInfo()
+
+
+
