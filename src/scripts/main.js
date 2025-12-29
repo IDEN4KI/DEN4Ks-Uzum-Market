@@ -1,5 +1,8 @@
 import { Header } from "../components/Header"
-import { ProductsSection } from "../components/ProductsSection";
+import { ProductsSection1 } from "../components/ProductsSection";
+import { ProductsSection2 } from "../components/ProductsSection";
+import { ProductsSection3 } from "../components/ProductsSection";
+
 import "../styles/main.css"
 
 import Swiper from 'swiper';
@@ -90,15 +93,15 @@ app.innerHTML = `
       <h1>Рекомендуем</h1>
 
       <ul id="recomended-section">
-        ${ProductsSection}
+        ${ProductsSection1}
       </ul>
 
       <ul id="recomended-section">
-        ${ProductsSection}
+        ${ProductsSection2}
       </ul>
 
       <ul id="recomended-section">
-        ${ProductsSection}
+        ${ProductsSection3}
       </ul>
 
     </section>

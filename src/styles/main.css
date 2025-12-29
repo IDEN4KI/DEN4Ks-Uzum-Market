@@ -104,11 +104,12 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   overflow-y: hidden;
   overflow-x: hidden;
   transition: 0.4s;
+  position: relative;
 }
 
 #item-img{
@@ -123,16 +124,15 @@
   #item-img{
     transform: scale(1.03);
   }
-
 }
 
 #item-button{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: var(--violet-55);
-  height: 10%;
+  height: 9%;
   gap: 1%;
   transition: 0.4s;
 }
@@ -149,4 +149,54 @@
 
 #item-button-img{
   width: 8%;
+}
+
+.item-favorite-img{
+  position: absolute;
+  width: 10%;
+  top: 2%;
+  right: 3%;
+}
+
+.item-price-card{
+  color: var(--violet-55);
+  font-weight: 500;
+}
+
+.item-price-withoutcard{
+  font-size: 85%;
+  color: var(--gray-50);
+  font-weight: 500;
+}
+
+.installment-plan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--uzum-yellow-bb01);
+  border-radius: 5px;
+  height: 5%;
+  font-size: 75%;
+  width: max-content;
+  padding: 2%;
+}
+
+.item-title{
+  font-size: 75%;
+}
+
+.reviews-block{
+  display: flex;
+  align-items: center;
+  font-size: 75%;
+  gap: 1%;
+}
+
+.star{
+  width: 6%;
+  height: 70%;
+}
+
+.item-amount-reviews{
+  color: var(--gray-40);
 }
