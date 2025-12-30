@@ -16,8 +16,10 @@ import 'swiper/css';
 
 import { Autoplay } from 'swiper/modules';
 
-
+const link = document.getElementById("header-link-third")
+const salesman = document.getElementById("main-sales")
 const app = document.getElementById("app")
+
 
 app.innerHTML = `
   ${Header}

@@ -11,7 +11,7 @@ export const Header = `
             </div>
           </div>
           <div id="header-top-right">
-            <a id="header-link-third" href="#">Стать продавцом</a>
+            <a id="header-link-third" href="becomeSalesman.html">Стать продавцом</a>
             <span id="palka">|</span>
             <a id="header-link-fouth" href="#">Открыть пункт выдачи</a>
             <span id="palka2">|</span>
@@ -31,7 +31,7 @@ export const Header = `
        <div class="wrapper">
       <section id="header-middle">
         <div id="header-middle-left">
-          <img src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
+          <img href="index.html" src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
           <div id="midale">
             <img src="public/icons/Screenshot_3.png" alt="ya xz" id="midale-icon">
             <button id="catalog-btn">Каталог</button>

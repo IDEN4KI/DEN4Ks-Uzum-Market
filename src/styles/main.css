@@ -110,12 +110,15 @@
   overflow-x: hidden;
   transition: 0.4s;
   position: relative;
+  
 }
 
 #item-img{
+  
   width: 100%;
   border-radius: 5px;
   transition: 0.4s;
+  
 }
 
 #recomended-section-item:hover{
@@ -135,6 +138,7 @@
   height: 9%;
   gap: 1%;
   transition: 0.4s;
+
 }
 
 #item-button:hover{

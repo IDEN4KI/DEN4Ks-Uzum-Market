@@ -11,7 +11,7 @@ export let ProductsSection3 = ``
 
 
 
-for (let i = 0; i < 5; i++) {
+for (let i = 7; i < 12; i++) {
   const price = data[i].price / 10  
   ProductsSection1 += `
     <li id="recomended-section-item">
@@ -27,7 +27,7 @@ for (let i = 0; i < 5; i++) {
       <div class="reviews-block">
         <img class="star" src="public/icons/icons8-звезда-48.png" alt="star">
         <span class="item-rating">${data[i].rating}</span>
-        <span class="item-amount-reviews">(${price.toFixed(0) / 100} отзывов)</span>
+        <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
       <div id="item-button">
@@ -38,7 +38,7 @@ for (let i = 0; i < 5; i++) {
   `;
 }
 
-for (let i = 5; i < 10; i++) {
+for (let i = 25; i < 30; i++) {
   const price = data[i].price / 10  
   ProductsSection2 += `
     <li id="recomended-section-item">
@@ -54,7 +54,7 @@ for (let i = 5; i < 10; i++) {
       <div class="reviews-block">
         <img class="star" src="public/icons/icons8-звезда-48.png" alt="star">
         <span class="item-rating">${data[i].rating}</span>
-        <span class="item-amount-reviews">(${price.toFixed(0) / 100} отзывов)</span>
+        <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
       <div id="item-button">
@@ -65,7 +65,7 @@ for (let i = 5; i < 10; i++) {
   `;
 }
 
-for (let i = 10; i < 15; i++) {
+for (let i = 13; i < 18; i++) {
   const price = data[i].price / 10  
   ProductsSection3 += `
     <li id="recomended-section-item">
@@ -81,7 +81,7 @@ for (let i = 10; i < 15; i++) {
       <div class="reviews-block">
         <img class="star" src="public/icons/icons8-звезда-48.png" alt="star">
         <span class="item-rating">${data[i].rating}</span>
-        <span class="item-amount-reviews">(${price.toFixed(0) / 100} отзывов)</span>
+        <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
       <div id="item-button">
