@@ -13,7 +13,7 @@ export const Header = `
           <div id="header-top-right">
             <a id="header-link-third" href="becomeSalesman.html">Стать продавцом</a>
             <span id="palka">|</span>
-            <a id="header-link-fouth" href="#">Открыть пункт выдачи</a>
+            <a id="header-link-fouth" href="openPVZ.html">Открыть пункт выдачи</a>
             <span id="palka2">|</span>
             <a id="header-link-fifth" href="#">Вопрос-ответ</a>
             <span id="palka2">|</span>
@@ -31,7 +31,9 @@ export const Header = `
        <div class="wrapper">
       <section id="header-middle">
         <div id="header-middle-left">
-          <img href="index.html" src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
+          <a href="index.html">
+            <img href="index.html" src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
+          </a>
           <div id="midale">
             <img src="public/icons/Screenshot_3.png" alt="ya xz" id="midale-icon">
             <button id="catalog-btn">Каталог</button>
@@ -52,11 +54,11 @@ export const Header = `
           </div>
           <div id="favorite-btn">
             <img id="icon" src="public/icons/free-icon-favorite-13426236.png" alt="login">
-            <a href="#">Избранное</a>
+            <a href="favorite.html">Избранное</a>
           </div>
           <div id="cart-btn">
             <img id="icon" src="public/icons/free-icon-shopping-bag-icon-17287783.png" alt="login">
-            <a href="#">Корзина</a>
+            <a href="cart.html">Корзина</a>
           </div>
         </div>
       </section>

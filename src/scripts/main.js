@@ -132,11 +132,6 @@ const swiper = new Swiper('.swiper', {
     speed: 2000,
   },
 
-  
-
-
-
-
 })
 
 async function getData() {
