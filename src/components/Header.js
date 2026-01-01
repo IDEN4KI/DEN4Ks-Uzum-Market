@@ -7,7 +7,7 @@ export const Header = `
               <img id="map-tracker" src="public/icons/free-icon-location-pin-2776077.png" alt="map-tracker">
               <a id="header-link-first" href="#">Самарканд</a>
               <img id="arrow" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
-              <a id="header-link-second" href="#">Пункты выдачи</a>
+              <a id="header-link-second" href="pvz.html">Пункты выдачи</a>
             </div>
           </div>
           <div id="header-top-right">
@@ -50,7 +50,7 @@ export const Header = `
         <div id="header-middle-right">
           <div id="login-btn"> 
             <img id="icon" src="public/icons/free-icon-user-icon-4360835.png" alt="login">
-            <a href="#">Логин</a>
+            <a href="#">Войти</a>
           </div>
           <div id="favorite-btn">
             <img id="icon" src="public/icons/free-icon-favorite-13426236.png" alt="login">

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="public/icons/market-logo.png" />
+    <link rel="stylesheet" href="./src/styles/colors.css">
+    <link rel="stylesheet" href="./src/styles/pvz.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>DEN4K market Favorite</title>
+</head>
+
+<body>
+    <div id="main-sales"></div>
+
+    <div id="main">
+        <section id="left">
+            <h2>DEN4K</h2>
+            <a id="left-link" href="pvz.html">Пункты выдачи</a>
+            <a id="left-link2" href="vakansii.html">Вакансии</a>
+        </section>
+
+        <section id="right">
+            <h1 id="right-title">Пункты выдачи</h1>
+            <span id="right-span">Бесплатная доставка за сутки в пункты выдачи в 515 городах Узбекистана</span>
+
+            <div id="dvoinoy-div">
+                <div id="section-left">
+                    <span id="city">Город :</span>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Ташкент
+                            <span class="arrow">⌄</span>
+                        </button>
+                        <ul class="dropdown-list">
+                            <li>Абдукарим</li>
+                            <li>Авваль</li>
+                            <li>Аим</li>
+                            <li>Акалтын</li>
+                            <li>Аккавак</li>
+                            <li>Абдукарим</li>
+                            <li>Андижан </li>
+                            <li>Асака </li>
+                            <li>Бухара </li>
+                            <li>Джалакудук </li>
+                            <li>Джизак </li>
+                            <li>Карши </li>
+                            <li>Карасу </li>
+                            <li>Коканд </li>
+                            <li>Наманган</li>
+                            <li>Навои</li>
+                            <li>Нукус</li>
+                            <li>Нурата</li>
+                            <li>Самарканд</li>
+                            <li>Ташкент</li>
+                            <li>Термез</li>
+                            <li>Фергана</li>
+                            <li>Хива</li>
+                            <li>Чирчик</li>
+                            <li>Шахрисабз</li>
+                            <li>Шовот</li>
+                            <li>Янгиер</li>
+                            <li>Янгиюль</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="map"></div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="footer-top">
+        <div id="footer-div">
+            <span>О нас</span>
+
+            <a href="pvz.html">Пункты выдачи</a>
+            <a href="vakansii.html">Вакансии</a>
+        </div>
+
+        <div id="footer-div">
+            <span>Пользователям</span>
+
+            <a href="#">Связаться с нами</a>
+            <a href="#">Вопрос - Ответ</a>
+        </div>
+
+        <div id="footer-div">
+            <span>Для предпринимателей</span>
+
+            <a href="becomeSalesman.html">Продавайте на DEN4K</a>
+            <a href="becomeSalesman.html">Вход для продавцов</a>
+            <a href="becomeSalesman.html">Открыть пункт выдачи</a>
+        </div>
+
+        <div id="footer-div">
+            <div id="footer-div4-top">
+                <img id="qr-code" src="public/images/Screeneeshot_7.jpg" alt="qr-code">
+                <div id="ya-xz">
+                    <span id="blyat">Покупать удобнее в <br> приложении</span>
+                    <span>Наведите камеру и скачайте <br>бесплатное приложение в App <br>Store и Google Play</span>
+                </div>
+            </div>
+            <span>DEN4K в соцсетях</span>
+            <div id="footer-div4-bottom">
+                <img id="footer-icon" src="public/icons/Screenshot_1-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_3-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_4-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_5-Photoroom.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer-bottom">
+        <a class="footer-link" href="#">Соглашение о конфиденциальности</a>
+        <a class="footer-link" href="#">Пользовательское соглашение</a>
+        <a class="footer-link" href="#">Положение по обработке персональных данных</a>
+        <span id="footer-span">2026 © ИП ООО «DEN4K MARKET». ИНН 335110733. Все права защищены»</span>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="./src/scripts/map.js"></script>
+    <script type="module">
+        import { Header } from "./src/components/Header"
+        document.getElementById("main-sales").innerHTML = Header
+    </script>
+</body>
+
+</html>
