@@ -524,5 +524,7 @@ export const Header = `
         background: var(--black-a10);
         border-radius:5px;
       }
+
+      
     </style>
 `;

@@ -2,6 +2,14 @@ import { Header } from "../components/Header"
 import { ProductsSection1 } from "../components/ProductsSection";
 import { ProductsSection2 } from "../components/ProductsSection";
 import { ProductsSection3 } from "../components/ProductsSection";
+import { ProductsSection4 } from "../components/ProductsSection";
+import { ProductsSection5 } from "../components/ProductsSection";
+import { ProductsSection6 } from "../components/ProductsSection";
+import { ProductsSection7 } from "../components/ProductsSection";
+import { ProductsSection8 } from "../components/ProductsSection";
+import { ProductsSection9 } from "../components/ProductsSection";
+import { ProductsSection10 } from "../components/ProductsSection";
+import { ProductsSection11 } from "../components/ProductsSection";
 
 import "../styles/main.css"
 
@@ -92,7 +100,7 @@ app.innerHTML = `
   </section>
 
     <section id="recomended">
-      <h1>Рекомендуем</h1>
+      <h1>Популярное</h1>
 
       <ul id="recomended-section">
         ${ProductsSection1}
@@ -107,7 +115,164 @@ app.innerHTML = `
       </ul>
 
     </section>
+
+      <div id="more-button">
+        <span id="more-button-text" >Показать ешё 10</span>
+      </div>
+
+    <section id="sales-for-electronics">
+      <h1>Скидки на технику</h1>
+
+      <ul id="recomended-section">
+        ${ProductsSection6}
+      </ul>
+
+    </section>
+
+      <div id="more-button2">
+        <span id="more-button-text" >Показать ешё 5</span>
+      </div>
+
+    <section id="low-prise">
+      <h1>Гарантия низких цен</h1>
+
+      <ul id="recomended-section">
+        ${ProductsSection8}
+      </ul>
+
+    </section>
+
+    <section id="household-appliances">
+      <h1>Бытовая техника</h1>
+
+      <ul id="recomended-section">
+        ${ProductsSection9}
+      </ul>
+
+    </section>
+
+      <div id="more-button3">
+        <span id="more-button-text" >Показать ешё 5</span>
+      </div>
+
+    <section id="lowquality-TV">
+      <h1>Телевизоры низкого качества (буквально)</h1>
+
+      <ul id="recomended-section">
+        ${ProductsSection10}
+      </ul>
+
+    </section>
+
+      <div id="more-button4">
+        <span id="more-button-text" >Показать ешё 5</span>
+      </div>
+      
+
+  <footer class="footer-top">
+    <div id="footer-div">
+      <span>О нас</span>
+
+      <a href="pvz.html">Пункты выдачи</a>
+      <a href="vakansii.html">Вакансии</a>
+    </div>
+
+    <div id="footer-div">
+      <span>Пользователям</span>
+
+      <a href="#">Связаться с нами</a>
+      <a href="#">Вопрос - Ответ</a>
+    </div>
+
+    <div id="footer-div">
+      <span>Для предпринимателей</span>
+
+      <a href="becomeSalesman.html">Продавайте на DEN4K</a>
+      <a href="becomeSalesman.html">Вход для продавцов</a>
+      <a href="becomeSalesman.html">Открыть пункт выдачи</a>
+    </div>
+
+    <div id="footer-div">
+      <div id="footer-div4-top">
+        <img id="qr-code" src="public/images/Screeneeshot_7.jpg" alt="qr-code">
+        <div id="ya-xz">
+          <span id="blyat">Покупать удобнее в <br> приложении</span>
+          <span>Наведите камеру и скачайте <br>бесплатное приложение в App <br>Store и Google Play</span>
+        </div>
+      </div>
+      <span>DEN4K в соцсетях</span>
+      <div id="footer-div4-bottom">
+        <img id="footer-icon" src="public/icons/Screenshot_1-Photoroom.png" alt="">
+        <img id="footer-icon" src="public/icons/Screenshot_3-Photoroom.png" alt="">
+        <img id="footer-icon" src="public/icons/Screenshot_4-Photoroom.png" alt="">
+        <img id="footer-icon" src="public/icons/Screenshot_5-Photoroom.png" alt="">
+      </div>
+    </div>
+  </footer>
+
+  <footer class="footer-bottom">
+    <a class="footer-link" href="#">Соглашение о конфиденциальности</a>
+    <a class="footer-link" href="#">Пользовательское соглашение</a>
+    <a class="footer-link" href="#">Положение по обработке персональных данных</a>
+    <span id="footer-span">2026 © ИП ООО «DEN4K MARKET». ИНН 335110733. Все права защищены»</span>
+  </footer>
 `
+
+const recomended = document.getElementById("recomended")
+const moreButton = document.getElementById("more-button")
+const content = `      
+  <ul id="recomended-section">
+    ${ProductsSection4}
+  </ul>
+
+  <ul id="recomended-section">
+    ${ProductsSection5}
+  </ul>
+`
+
+moreButton.addEventListener('click', () => {
+  recomended.innerHTML += content
+  moreButton.style.display = 'none'
+});
+
+const electronics = document.getElementById("sales-for-electronics")
+const moreButton2 = document.getElementById("more-button2")
+const content2 = `      
+  <ul id="recomended-section">
+    ${ProductsSection7}
+  </ul>
+`
+
+moreButton2.addEventListener('click', () => {
+  electronics.innerHTML += content2
+  moreButton2.style.display = 'none'
+});
+
+const household = document.getElementById("household-appliances")
+const moreButton3 = document.getElementById("more-button3")
+const content3 = `      
+  <ul id="recomended-section">
+    ${ProductsSection4}
+  </ul>
+`
+
+moreButton3.addEventListener('click', () => {
+  household.innerHTML += content3
+  moreButton3.style.display = 'none'
+});
+
+const lowqualityTV = document.getElementById("lowquality-TV")
+const moreButton4 = document.getElementById("more-button4")
+const content4 = `      
+  <ul id="recomended-section">
+    ${ProductsSection11}
+  </ul>
+`
+
+moreButton4.addEventListener('click', () => {
+  lowqualityTV.innerHTML += content4
+  moreButton4.style.display = 'none'
+});
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Autoplay],
@@ -163,7 +328,7 @@ async function registerUser() {
     const res = await fetch(
       `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/auth/register`,
       {
-        method: "POST", 
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
@@ -223,8 +388,7 @@ async function getAllProducts() {
 async function removeFromFavorites() {
   try {
     const res = await fetch(
-      `${
-        import.meta.env.VITE_BACKEND_BASE_URL
+      `${import.meta.env.VITE_BACKEND_BASE_URL
       }/api/v1/user/favorites/693d0b2d7b7d4a5c0f2c71b9`,
       {
         method: "DELETE",
@@ -244,8 +408,7 @@ async function removeFromFavorites() {
 async function addToCart() {
   try {
     const res = await fetch(
-      `${
-        import.meta.env.VITE_BACKEND_BASE_URL
+      `${import.meta.env.VITE_BACKEND_BASE_URL
       }/api/v1/user/cart/693d0b2d7b7d4a5c0f2c71b9`,
       {
         method: "POST",
