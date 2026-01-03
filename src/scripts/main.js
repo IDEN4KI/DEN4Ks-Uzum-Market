@@ -230,6 +230,7 @@ const content = `
   </ul>
 `
 
+
 moreButton.addEventListener('click', () => {
   recomended.innerHTML += content
   moreButton.style.display = 'none'

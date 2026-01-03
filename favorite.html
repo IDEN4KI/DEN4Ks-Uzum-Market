@@ -13,10 +13,18 @@
 <body>
     <div id="main-sales"></div>
 
+    <section id="favorite-section">
+        <ul id="recomended-section-favorite"></ul>
+    </section>
+
+    
+
     <script type="module">
         import { Header } from "./src/components/Header"
+        import { ProductsSectionFavorite} from "./src/components/ProductsSection"
 
         document.getElementById("main-sales").innerHTML = Header
+        document.getElementById("favorite-section").innerHTML = ProductsSectionFavorite
     </script>
 </body>
 
