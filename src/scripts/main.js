@@ -11,6 +11,8 @@ import { ProductsSection9 } from "../components/ProductsSection";
 import { ProductsSection10 } from "../components/ProductsSection";
 import { ProductsSection11 } from "../components/ProductsSection";
 
+
+
 import "../styles/main.css"
 
 import Swiper from 'swiper';
@@ -273,6 +275,32 @@ const content4 = `
 moreButton4.addEventListener('click', () => {
   lowqualityTV.innerHTML += content4
   moreButton4.style.display = 'none'
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("item-favorite-img")) return;
+
+  const card = e.target.closest(".recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    img: card.querySelector(".item-img").src,
+    title: card.querySelector(".item-title").textContent,
+    price: card.querySelector(".item-price-card").textContent,
+    rating: card.querySelector(".item-rating")?.textContent || ""
+  };
+
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // защита от дубликатов
+  if (favorites.some(item => item.id === product.id)) return;
+
+  favorites.push(product);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  // (необязательно) визуальный отклик
+  e.target.classList.add("active");
 });
 
 const swiper = new Swiper('.swiper', {

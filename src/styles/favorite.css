@@ -1,0 +1,479 @@
+@import url(./fonts.css);
+
+* {
+  font-family: "Inter";
+
+}
+
+.swiper {
+
+  width: 1280px;
+  height: 430px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+
+
+
+  --swiper-pagination-color: rgba(204, 204, 204, 0.829);
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 5px;
+  --swiper-pagination-bottom: 8px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: #ffffff;
+  --swiper-pagination-progressbar-size: 4px;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-width: 6px;
+  --swiper-pagination-bullet-height: 6px;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+
+
+  --swiper-navigation-color: rgb(255, 255, 255);
+  --swiper-navigation-size: 25px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 12px;
+
+}
+
+#under-swiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#under-swiper-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-95);
+  border-radius: 15px;
+  height: 60px;
+  cursor: pointer;
+  gap: 15px;
+  font-size: 10px;
+  transition: 0.4s;
+}
+
+#under-swiper-section:hover {
+  background-color: var(--gray-90);
+
+}
+
+#im {
+  width: 10%;
+}
+
+#aaaa {
+  color: var(--black-a95);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#aaaaa {
+  color: var(--black-a95);
+}
+
+#recomended {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#sales-for-electronics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#low-prise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#household-appliances {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#lowquality-TV {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#lowquality-TV h1 {
+  margin-right: 46%;
+}
+
+#household-appliances h1 {
+  margin-right: 78%;
+}
+
+#low-prise h1 {
+  margin-right: 73%;
+}
+
+#sales-for-electronics h1 {
+  margin-right: 76%;
+}
+
+#recomended h1 {
+  margin-right: 85%;
+}
+
+#recomended-section {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+
+#recomended-section-item {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: 0.4s;
+  position: relative;
+
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper item-img {
+  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+
+#item-img {
+
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.4s;
+
+}
+
+#recomended-section-item:hover {
+  box-shadow: 0px 0px 10px 10px var(--gray-99);
+
+  #item-img {
+    transform: scale(1.03);
+  }
+}
+
+#item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--violet-55);
+  height: 9%;
+  gap: 1%;
+  transition: 0.4s;
+
+}
+
+#item-button:hover {
+  background-color: var(--violet-60);
+
+}
+
+#item-button-text {
+  color: white;
+  font-weight: 500;
+}
+
+#item-button-img {
+  width: 8%;
+}
+
+.item-favorite-img {
+  position: absolute;
+  width: 10%;
+  top: 2%;
+  right: 3%;
+  z-index: 10;
+}
+
+.item-price-card {
+  color: var(--violet-55);
+  font-weight: 500;
+}
+
+
+
+.item-price-withoutcard {
+  font-size: 85%;
+  color: var(--gray-50);
+  font-weight: 500;
+}
+
+.installment-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--uzum-yellow-bb01);
+  border-radius: 5px;
+  height: 5%;
+  font-size: 75%;
+  width: max-content;
+  padding: 2%;
+}
+
+.item-title {
+  font-size: 75%;
+}
+
+.reviews-block {
+  display: flex;
+  align-items: center;
+  font-size: 75%;
+  gap: 1%;
+}
+
+.star {
+  width: 6%;
+  height: 70%;
+}
+
+.item-amount-reviews {
+  color: var(--gray-40);
+}
+
+.footer-top {
+  margin-top: 3%;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid var(--black-a20);
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 1%;
+  justify-content: center;
+  gap: 2.1%;
+}
+
+#footer-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 15%;
+}
+
+#footer-div a {
+  color: var(--black-a35);
+}
+
+#footer-div4-top {
+  padding: 5%;
+  display: flex;
+  gap: 5%;
+  border: 1px solid var(--black-a20);
+  border-radius: 15px;
+}
+
+#footer-icon {
+  width: 13%;
+}
+
+#footer-div4-bottom {
+  display: flex;
+  gap: 5%;
+}
+
+#blyat {
+  font-size: 110%;
+}
+
+#ya-xz {
+  display: flex;
+  flex-direction: column;
+  font-size: 72%;
+  gap: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  margin-top: 2%;
+  border-top: 1px solid var(--black-a15);
+  padding: 15px;
+  font-size: 13.5px;
+  gap: 20px;
+  color: var(--black-a55);
+}
+
+.footer-bottom a {
+  color: var(--black-a55);
+}
+
+.footer-bottom a:hover {
+  color: var(--black-a75);
+}
+
+#link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--violet-55);
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+
+}
+
+#link-button:hover {
+  background-color: var(--violet-60);
+}
+
+#link-buttonE {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-a10);
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  height: 50px;
+  margin-top: 3%;
+
+}
+
+#link-buttonE:hover {
+  background-color: var(--black-a30);
+}
+
+#sign-linkE {
+  color: var(--black-a85);
+}
+
+#more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--black-a10);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 40px;
+}
+
+#more-button:hover {
+  background-color: var(--black-a20);
+}
+
+#more-button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--black-a10);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 40px;
+}
+
+#more-button2:hover {
+  background-color: var(--black-a20);
+}
+
+#more-button3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--black-a10);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 40px;
+}
+
+#more-button3:hover {
+  background-color: var(--black-a20);
+}
+
+#more-button4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--black-a10);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 40px;
+}
+
+#more-button4:hover {
+  background-color: var(--black-a20);
+}
+
+.item-favorite-img {
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.item-favorite-img.animate {
+  animation: favoritePop 0.35s ease;
+}
+
+@keyframes favoritePop {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(0.95) ;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}

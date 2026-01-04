@@ -10,61 +10,127 @@ export let ProductsSection9 = ``
 export let ProductsSection10 = ``
 export let ProductsSection11 = ``
 
-export let ProductsSectionFavorite = `
-  <ul id="recomended-section">
-    
-  </ul>
-`
+export let ProductsSectionFavorite = ``
 
 const res = await fetch(
   `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/main/products`
 );
 const data = await res.json()
 
-const favoriteList = document.getElementById("recomended-section-favorite");
+const recomendedList = document.getElementById("recomended-section");
 
 document.addEventListener("click", (e) => {
-  const favBtn = e.target.closest(".item-favorite-img");
-  if (!favBtn) return;
+  const fav = e.target.closest(".item-favorite-img");
+  if (!fav) return;
 
-  const item = favBtn.closest("#recomended-section-item");
-  const itemId = item.dataset.id;
+  fav.classList.toggle("active");
 
-  document
-    .querySelectorAll(`#recomended-section-item[data-id="${itemId}"] .item-favorite-img`)
-    .forEach(btn => {
-      btn.classList.toggle("active", favBtn.classList.contains("active"));
-      btn.src = favBtn.src;
-    });
-
-  favBtn.classList.toggle("active");
-
-  favBtn.src = favBtn.classList.contains("active")
+  fav.src = fav.classList.contains("active")
     ? "public/icons/free-icon-favoritere-on-13426236.png"
     : "public/icons/free-icon-favoritere-13426236.png";
 
+  fav.classList.remove("animate");
+  void fav.offsetWidth;
+  fav.classList.add("animate");
 
-  favBtn.classList.remove("animate");
-  void favBtn.offsetWidth;
-  favBtn.classList.add("animate");
+  if (e.target.classList.contains("item-favorite-img")) {
 
-  if (favBtn.classList.contains("active")) {
+    const card = e.target.closest("#recomended-section-item");
+    if (!card) return;
 
-    if (!favoriteList.querySelector(`[data-id="${itemId}"]`)) {
-      favoriteList.appendChild(item.cloneNode(true));
-    }
-  } else {
 
-    const favItem = favoriteList.querySelector(`[data-id="${itemId}"]`);
-    if (favItem) favItem.remove();
+    const id = card.dataset.id;
   }
 });
 
 
 
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("item-favorite-img")) return;
+
+  const card = e.target.closest(".recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    html: card.outerHTML 
+  };
+
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  if (favorites.some(item => item.id === product.id)) return;
+
+  favorites.push(product);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("item-favorite-img")) return;
+
+  const card = e.target.closest("#recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    img: card.querySelector("#item-img").src,
+    favoriteimg: card.querySelector(".item-favorite-img").src,
+    title: card.querySelector(".item-title").textContent,
+    price: card.querySelector(".item-price-card").textContent,
+    pricewhithout: card.querySelector(".item-price-withoutcard").textContent,
+    installment: card.querySelector(".installment-plan").innerHTML,
+    iteminstallment: card.querySelector("#item-installment-plan").textContent,
+    reviewsblock: card.querySelector(".reviews-block").innerHTML,
+    star: card.querySelector(".star").src,
+    rating: card.querySelector(".item-rating")?.textContent || "",
+    reviews: card.querySelector(".item-amount-reviews").textContent,
+    button: card.querySelector("#item-button").innerHTML,
+    buttonimg: card.querySelector("#item-button-img").src,
+    buttontext: card.querySelector("#item-button-text").textContent,
+
+  };
+
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+
+  if (favorites.some(item => item.id === product.id)) return;
+
+  favorites.push(product);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  e.target.classList.add("active");
+});
+
+
 for (let i = 7; i < 12; i++) {
   const price = data[i].price / 10
   ProductsSection1 += `
+    <li id="recomended-section-item" data-id="${data[i].id}">
+      <img class="item-favorite-img" src="public/icons/free-icon-favoritere-13426236.png" alt="item-favorite-img">
+      <img id="item-img" src="${data[i].media[0]}" alt="item-img">
+
+      <span class="item-price-card">${data[i].price}</span>
+      <span class="item-price-withoutcard">${data[i].price + 10000} </span>
+      <div class="installment-plan">
+        <span id="item-installment-plan">${price.toFixed(0)} сум/мес</span>
+      </div> 
+      <span class="item-title">${data[i].title}</span>
+      <div class="reviews-block">
+        <img class="star" src="public/icons/icons8-звезда-48.png" alt="star">
+        <span class="item-rating">${data[i].rating}</span>
+        <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
+      </div>
+
+      <div id="item-button">
+        <img id="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
+        <span id="item-button-text">В корзину</span>
+      </div>
+    </li>
+  `;
+}
+
+for (let i = 7; i < 12; i++) {
+  const price = data[i].price / 10
+  ProductsSectionFavorite += `
     <li id="recomended-section-item" data-id="${data[i].id}">
       <img class="item-favorite-img" src="public/icons/free-icon-favoritere-13426236.png" alt="item-favorite-img">
       <img id="item-img" src="${data[i].media[0]}" alt="item-img">

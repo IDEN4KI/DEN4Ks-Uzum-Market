@@ -7,25 +7,26 @@
     <link rel="icon" type="image/svg+xml" href="public/icons/market-logo.png" />
     <link rel="stylesheet" href="./src/styles/colors.css">
     <link rel="stylesheet" href="./src/styles/salesman.css">
+    <link rel="stylesheet" href="./src/styles/favorite.css">
     <title>DEN4K market Favorite</title>
 </head>
 
 <body>
     <div id="main-sales"></div>
 
-    <section id="favorite-section">
-        <ul id="recomended-section-favorite"></ul>
+    <section id="recomended">
+        <ul id="recomended-section"></ul>
     </section>
 
-    
+
 
     <script type="module">
         import { Header } from "./src/components/Header"
-        import { ProductsSectionFavorite} from "./src/components/ProductsSection"
-
         document.getElementById("main-sales").innerHTML = Header
-        document.getElementById("favorite-section").innerHTML = ProductsSectionFavorite
     </script>
+
+    <script type="module" src="/src/scripts/favorite.js"></script>
+
 </body>
 
 </html>
