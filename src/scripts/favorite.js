@@ -3,7 +3,9 @@ const res = await fetch(
 );
 const data = await res.json()
 
-const recomendedList = document.getElementById("recomended-section");
+
+
+const recomendedList = document.getElementById("recomended-section-favorite");
 
 document.addEventListener("click", (e) => {
   const fav = e.target.closest(".item-favorite-img");
@@ -32,33 +34,47 @@ document.addEventListener("click", (e) => {
     const clone = card.cloneNode(true);
     recomendedList.appendChild(clone);
   }
-});
 
-const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-favorites.forEach(item => {
-  recomendedList.insertAdjacentHTML("beforeend", `
-    <li class="recomended-section-item" data-id="${item.id}">
-      <img class="item-img" src="${item.img}">
-      <span class="item-title">${item.title}</span>
-      <span class="item-price-card">${item.price}</span>
-
-      <button class="remove-favorite">Удалить</button>
-    </li>
-  `);
-});
-
-document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("remove-favorite")) return;
-
-  const card = e.target.closest(".recomended-section-item");
-  const id = card.dataset.id;
 
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   favorites = favorites.filter(item => item.id !== id);
   localStorage.setItem("favorites", JSON.stringify(favorites));
 
   card.remove();
+});
+
+const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+favorites.forEach(item => {
+  const price = item.price / 10
+  recomendedList.insertAdjacentHTML("beforeend", `
+    <li id="recomended-section-item" data-id="${item.id}">
+      <img class="item-favorite-img active" src="public/icons/free-icon-favoritere-on-13426236.png">
+
+      <img class="item-img" src="${item.img}">
+
+      <span class="item-price-card">${item.price}</span>
+      <span class="item-price-withoutcard">${Number(item.price) + 100}</span>
+
+      <div class="installment-plan">
+        <span>${Number(price.toFixed(0))} сум/мес</span>
+      </div>
+
+      <span class="item-title">${item.title}</span>
+
+      <div class="reviews-block">
+        <img class="star" src="public/icons/icons8-звезда-48.png">
+        <span>${item.rating}</span>
+        <span>(${Number(Math.round(price.toFixed(0) / 100))} отзывов)</span>
+      </div>
+
+      <div class="item-button">
+        <img src="public/icons/free-icon-add-to-cart-7541102.png">
+        <span>В корзину</span>
+      </div>
+    </li>
+  `);
 });
 
 

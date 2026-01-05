@@ -5,158 +5,9 @@
 
 }
 
-.swiper {
-
-  width: 1280px;
-  height: 430px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top: 20px;
-
-
-
-  --swiper-pagination-color: rgba(204, 204, 204, 0.829);
-  --swiper-pagination-left: auto;
-  --swiper-pagination-right: 5px;
-  --swiper-pagination-bottom: 8px;
-  --swiper-pagination-top: auto;
-  --swiper-pagination-fraction-color: inherit;
-  --swiper-pagination-progressbar-bg-color: #ffffff;
-  --swiper-pagination-progressbar-size: 4px;
-  --swiper-pagination-bullet-size: 6px;
-  --swiper-pagination-bullet-width: 6px;
-  --swiper-pagination-bullet-height: 6px;
-  --swiper-pagination-bullet-inactive-color: #ffffff;
-  --swiper-pagination-bullet-inactive-opacity: 0.2;
-  --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-bullet-horizontal-gap: 2px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
-
-
-  --swiper-navigation-color: rgb(255, 255, 255);
-  --swiper-navigation-size: 25px;
-  --swiper-navigation-top-offset: 50%;
-  --swiper-navigation-sides-offset: 12px;
-
-}
-
-#under-swiper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1280px;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-#under-swiper-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--gray-95);
-  border-radius: 15px;
-  height: 60px;
-  cursor: pointer;
-  gap: 15px;
-  font-size: 10px;
-  transition: 0.4s;
-}
-
-#under-swiper-section:hover {
-  background-color: var(--gray-90);
-
-}
-
-#im {
-  width: 10%;
-}
-
-#aaaa {
-  color: var(--black-a95);
-  font-size: 15px;
-  font-weight: 500;
-}
-
-#aaaaa {
-  color: var(--black-a95);
-}
-
-#recomended {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1280px;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-#sales-for-electronics {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1280px;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-#low-prise {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1280px;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-#household-appliances {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1280px;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-#lowquality-TV {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1280px;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-#lowquality-TV h1 {
-  margin-right: 46%;
-}
-
-#household-appliances h1 {
-  margin-right: 78%;
-}
-
-#low-prise h1 {
-  margin-right: 73%;
-}
-
-#sales-for-electronics h1 {
-  margin-right: 76%;
-}
-
-#recomended h1 {
-  margin-right: 85%;
-}
-
-#recomended-section {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  gap: 20px;
-
-}
-
 #recomended-section-item {
   height: 400px;
-  width: 100%;
+  width: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -181,24 +32,35 @@
   position: relative;
 }
 
-
-#item-img {
-
+.item-img {
   width: 100%;
   border-radius: 5px;
   transition: 0.4s;
-
 }
 
 #recomended-section-item:hover {
   box-shadow: 0px 0px 10px 10px var(--gray-99);
 
-  #item-img {
+  .item-img {
     transform: scale(1.03);
   }
 }
 
-#item-button {
+#recomended-favorite {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#recomended-section-favorite {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,18 +72,17 @@
 
 }
 
-#item-button:hover {
+.item-button:hover {
   background-color: var(--violet-60);
-
 }
 
-#item-button-text {
+.item-button span {
   color: white;
   font-weight: 500;
 }
 
-#item-button-img {
-  width: 8%;
+.item-button img {
+  width: 10%;
 }
 
 .item-favorite-img {
@@ -236,8 +97,6 @@
   color: var(--violet-55);
   font-weight: 500;
 }
-
-
 
 .item-price-withoutcard {
   font-size: 85%;
@@ -281,7 +140,6 @@
   margin-top: 3%;
   display: flex;
   width: 100%;
-  border-top: 1px solid var(--black-a20);
   font-size: 15px;
   font-weight: 600;
   padding-top: 1%;
@@ -467,12 +325,15 @@
   0% {
     transform: scale(1) rotate(0);
   }
+
   40% {
     transform: scale(1.3);
   }
+
   70% {
-    transform: scale(0.95) ;
+    transform: scale(0.95);
   }
+
   100% {
     transform: scale(1) rotate(0);
   }

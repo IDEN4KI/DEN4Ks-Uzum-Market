@@ -280,7 +280,7 @@ moreButton4.addEventListener('click', () => {
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("item-favorite-img")) return;
 
-  const card = e.target.closest(".recomended-section-item");
+  const card = e.target.closest("#recomended-section-item");
   if (!card) return;
 
   const product = {
@@ -293,13 +293,13 @@ document.addEventListener("click", (e) => {
 
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  // защита от дубликатов
+
   if (favorites.some(item => item.id === product.id)) return;
 
   favorites.push(product);
   localStorage.setItem("favorites", JSON.stringify(favorites));
 
-  // (необязательно) визуальный отклик
+
   e.target.classList.add("active");
 });
 
