@@ -3,9 +3,13 @@ const res = await fetch(
 );
 const data = await res.json()
 
+import { removeFavorite } from "./favoritesService.js";
 
 
 const recomendedList = document.getElementById("recomended-section-favorite");
+const recomended = document.getElementById("recomended-favorite");
+const moijelania = document.getElementById("moijelania")
+
 
 document.addEventListener("click", (e) => {
   const fav = e.target.closest(".item-favorite-img");
@@ -34,17 +38,24 @@ document.addEventListener("click", (e) => {
     const clone = card.cloneNode(true);
     recomendedList.appendChild(clone);
   }
-
-  if (!e.target.classList.contains("remove-favorite")) return;
-
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  favorites = favorites.filter(item => item.id !== id);
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-
-  card.remove();
 });
 
 const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+if (favorites.length === 0) {
+  recomendedList.style.display = `none`
+  moijelania.style.display = `none`
+  recomended.innerHTML = `
+  <div id="dimon">
+    <img id="favoite-img" src="public/images/Screenshot_9.jpg" alt="">
+    <h2>Здесь сохраним ваши любимые товары</h2>
+    <span id="sp">Нажмите ♡ в товарах, которые обычно заказываете</span>
+    <span>или хотите купить позже</span>
+  </div>  
+  `
+}
+
+
 
 favorites.forEach(item => {
   const price = item.price / 10
@@ -77,6 +88,17 @@ favorites.forEach(item => {
   `);
 });
 
+document.addEventListener("click", (e) => {
+  const heart = e.target.closest(".item-favorite-img");
+  if (!heart) return;
 
+  const card = heart.closest("#recomended-section-item");
+  if (!card) return;
+
+  const id = card.dataset.id;
+
+  removeFavorite(id);
+  card.remove();
+});
 
 
