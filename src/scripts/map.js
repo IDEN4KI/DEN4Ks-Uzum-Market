@@ -23,3 +23,4 @@ L.marker([41.3111, 69.2797])
       dropdown.classList.remove('active');
     });
   });
+

@@ -1,19 +1,19 @@
 @import url(./fonts.css);
 
-*{
+* {
     font-family: "Inter";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#main{
+#main {
     display: flex;
 }
 
@@ -56,7 +56,7 @@ body{
 }
 
 #left-link2 {
-    color: var( --black-a95);
+    color: var(--black-a95);
 }
 
 #left-link:hover {
@@ -75,7 +75,7 @@ body{
     width: 60%;
 }
 
-#section-lefty{
+#section-lefty {
     display: flex;
     width: 200%;
     gap: 5px;
@@ -117,18 +117,20 @@ body{
     background-color: #e6e6e6;
 }
 
-#vakansii-text{
+
+
+#vakansii-text {
     margin-top: 3%;
     margin-left: 3%;
     margin-bottom: 3%;
 }
 
-#vakansii-text a{
+#vakansii-text a {
     text-decoration: underline;
     color: var(--black-a45);
 }
 
-#vakansii-text a:hover{
+#vakansii-text a:hover {
     color: var(--black-a85);
 }
 
@@ -160,7 +162,45 @@ body{
     display: block;
 }
 
-.footer-top{
+.dropdown-btnMain {
+    width: min-content;
+    border-radius: 12px;
+    border: none;
+    background: #f2f3f5;
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.dropdown-listMain {
+    display: none;
+    position: absolute;
+    width: min-content;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 8px 5px;
+    color: var(--black-a85);
+}
+
+.dropdown-listMain li {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.dropdown-listMain li:hover {
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+
+.dropdownMain.active .dropdown-listMain {
+    display: block;
+}
+
+.footer-top {
     margin-top: 3%;
     display: flex;
     width: 100%;
@@ -169,21 +209,21 @@ body{
     font-weight: 600;
     padding-top: 1%;
     justify-content: center;
-    gap: 2.1% ;
+    gap: 2.1%;
 }
 
-#footer-div{
+#footer-div {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 15%;
 }
 
-#footer-div a{
+#footer-div a {
     color: var(--black-a35);
 }
 
-#footer-div4-top{
+#footer-div4-top {
     padding: 5%;
     display: flex;
     gap: 5%;
@@ -191,27 +231,27 @@ body{
     border-radius: 15px;
 }
 
-#footer-icon{
+#footer-icon {
     width: 13%;
 }
 
-#footer-div4-bottom{
+#footer-div4-bottom {
     display: flex;
     gap: 5%;
 }
 
-#blyat{
+#blyat {
     font-size: 110%;
 }
 
-#ya-xz{
+#ya-xz {
     display: flex;
     flex-direction: column;
     font-size: 72%;
     gap: 10px;
 }
 
-.footer-bottom{
+.footer-bottom {
     display: flex;
     margin-top: 2%;
     border-top: 1px solid var(--black-a15);
@@ -221,15 +261,15 @@ body{
     color: var(--black-a55);
 }
 
-.footer-bottom a{
+.footer-bottom a {
     color: var(--black-a55);
 }
 
-.footer-bottom a:hover{
+.footer-bottom a:hover {
     color: var(--black-a75);
 }
 
-#link-button{
+#link-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,11 +280,11 @@ body{
 
 }
 
-#link-button:hover{
+#link-button:hover {
     background-color: var(--violet-60);
 }
 
-#link-buttonE{
+#link-buttonE {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,10 +297,10 @@ body{
 
 }
 
-#link-buttonE:hover{
+#link-buttonE:hover {
     background-color: var(--black-a30);
 }
 
-#sign-linkE{
+#sign-linkE {
     color: var(--black-a85);
 }

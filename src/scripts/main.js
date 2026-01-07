@@ -303,6 +303,21 @@ document.addEventListener("click", (e) => {
   e.target.classList.add("active");
 });
 
+  const dropdown = document.querySelector('.dropdownMain');
+  const btn = document.querySelector('.dropdown-btnMain');
+  const items = document.querySelectorAll('.dropdown-listMain li');
+
+  btn.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+  });
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      btn.firstChild.textContent = item.textContent;
+      dropdown.classList.remove('active');
+    });
+  });
+
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Autoplay],
 

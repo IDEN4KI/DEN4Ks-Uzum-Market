@@ -1,3 +1,5 @@
+
+
 export const Header = `
   <header>
 
@@ -5,8 +7,42 @@ export const Header = `
           <div id="header-top-left">
             <div id="header-top-left-inside">
               <img id="map-tracker" src="public/icons/free-icon-location-pin-2776077.png" alt="map-tracker">
-              <a id="header-link-first" href="#">Самарканд</a>
-              <img id="arrow" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
+               <div class="dropdownMain">
+                        <button class="dropdown-btnMain">
+                            Самарканд
+                        </button>
+                        <ul class="dropdown-listMain">
+                            <li>Абдукарим</li>
+                            <li>Авваль</li>
+                            <li>Аим</li>
+                            <li>Акалтын</li>
+                            <li>Аккавак</li>
+                            <li>Абдукарим</li>
+                            <li>Андижан </li>
+                            <li>Асака </li>
+                            <li>Бухара </li>
+                            <li>Джалакудук </li>
+                            <li>Джизак </li>
+                            <li>Карши </li>
+                            <li>Карасу </li>
+                            <li>Коканд </li>
+                            <li>Наманган</li>
+                            <li>Навои</li>
+                            <li>Нукус</li>
+                            <li>Нурата</li>
+                            <li>Самарканд</li>
+                            <li>Ташкент</li>
+                            <li>Термез</li>
+                            <li>Фергана</li>
+                            <li>Хива</li>
+                            <li>Чирчик</li>
+                            <li>Шахрисабз</li>
+                            <li>Шовот</li>
+                            <li>Янгиер</li>
+                            <li>Янгиюль</li>
+                        </ul>
+                    </div>
+              
               <a id="header-link-second" href="pvz.html">Пункты выдачи</a>
             </div>
           </div>
@@ -15,9 +51,9 @@ export const Header = `
             <span id="palka">|</span>
             <a id="header-link-fouth" href="openPVZ.html">Открыть пункт выдачи</a>
             <span id="palka2">|</span>
-            <a id="header-link-fifth" href="#">Вопрос-ответ</a>
+            <a id="header-link-fifth" href="openPVZ.html">Вопрос-ответ</a>
             <span id="palka2">|</span>
-            <a id="header-link-sixth" href="#">Мои заказы</a>
+            <a id="header-link-sixth" href="myOrders.html">Мои заказы</a>
             <span id="palka2">|</span>
 
           <div id="divchik">
@@ -353,6 +389,7 @@ export const Header = `
         font-size: 15px;
         font-weight: 440;
         width: 100%;
+
       }
 
       #header-bottom{
@@ -479,8 +516,8 @@ export const Header = `
       #header-top-right{
         display: flex;
         align-items: center;
-        width: 100%;
-        justify-content: space-around;
+        width: 70%;
+        justify-content: space-between;
       }
 
       #login-btn{
@@ -528,3 +565,4 @@ export const Header = `
       
     </style>
 `;
+

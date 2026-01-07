@@ -1,11 +1,11 @@
 @import url(./fonts.css);
 
-*{
+* {
     font-family: "Inter";
 
 }
 
-#sales-content{
+#sales-content {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
@@ -14,16 +14,16 @@
     gap: 10px;
 }
 
-#sign{
+#sign {
     width: 10%;
 }
 
-#sign-link{
+#sign-link {
     color: rgb(255, 255, 255);
     font-weight: 500;
 }
 
-#link-button{
+#link-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,6 +36,44 @@
     transition: 0.2s;
 }
 
-#link-button:hover{
+#link-button:hover {
     background-color: var(--violet-60);
+}
+
+.dropdown-btnMain {
+    width: min-content;
+    border-radius: 12px;
+    border: none;
+    background: #f2f3f5;
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.dropdown-listMain {
+    display: none;
+    position: absolute;
+    width: min-content;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 8px 5px;
+    color: var(--black-a85);
+}
+
+.dropdown-listMain li {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.dropdown-listMain li:hover {
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+
+.dropdownMain.active .dropdown-listMain {
+    display: block;
 }
