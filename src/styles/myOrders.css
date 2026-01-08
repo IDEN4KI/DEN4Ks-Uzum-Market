@@ -12,9 +12,8 @@
 
 #myOrders {
     display: flex;
-    align-items: center;
     gap: 2%;
-    margin-top: 3%;
+    margin-top: 2%;
     width: 67%;
     justify-content: space-between;
 }
@@ -22,33 +21,60 @@
 #myOrders-left {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
 }
 
 #myOrders-name {
     font-weight: 500;
     font-size: 30px;
-    margin-bottom: 15%;
+    margin-right: 56%;
+    margin-top: 2%;
 }
 
 #myOrders-list {
     list-style-type: none;
 }
 
-.myOrders-item1 {
+.myOrders-item-main {
     background-color: var(--gray-90);
     padding: 4%;
     border-radius: 10px;
     cursor: pointer;
+    color: black;
 }
 
-.myOrders-item-notmain {
+.myOrders-item-notmain1 {
     padding: 4%;
     border-radius: 10px;
     cursor: pointer;
+    color: black;
 }
 
-.myOrders-item-notmain:hover {
+.myOrders-item-notmain1:hover {
+    background-color: var(--gray-95);
+}
+
+
+.myOrders-item-notmain2 {
+    padding: 4%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.myOrders-item-notmain2:hover {
+    background-color: var(--gray-95);
+}
+
+
+.myOrders-item-notmain3 {
+    padding: 4%;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.myOrders-item-notmain3:hover {
     background-color: var(--gray-95);
 }
 
@@ -64,7 +90,7 @@
     gap: 2%;
 }
 
-.myOrders-right-button{
+.myOrders-right-button1{
     background-color: var(--gray-90);
     padding: 1%;
     border-radius: 20px;
@@ -72,7 +98,19 @@
     transition: 0.2s;
 }
 
-.myOrders-right-button:hover{
+.myOrders-right-button1:hover{
+    background-color: var(--gray-80);
+}
+
+.myOrders-right-button2{
+    background-color: var(--gray-90);
+    padding: 1%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.myOrders-right-button2:hover{
     background-color: var(--gray-80);
 }
 
@@ -91,6 +129,56 @@
     padding: 10%;
     align-items: center;
     border: 1px solid var(--black-a15);
+    gap: 15px;
+}
+
+#span-spanich{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#myOrders-right-main-text{
+    color: var(--black-a70);
+    font-weight: 700;
+    font-size: 35px;
+}
+
+#myOrders-right-main-button1{
+    padding: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--violet-55);
+    color: white;
+    width: 70%;
+    border-radius: 12px;
+}
+
+#myOrders-right-main-button1:hover{
+    background-color: var(--violet-60);
+}
+
+#myOrders-right-main-button2{
+    padding: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 100%;
+    border-radius: 12px;
+}
+
+#myOrders-right-main-button2:hover{
+    background-color: var(--gray-90);
+}
+
+#liink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
 }
 
 .dropdown-btnMain {
@@ -133,13 +221,14 @@
 
 
 .footer-top {
-    margin-top: 3%;
+    margin-top: 5%;
     display: flex;
     width: 100%;
     font-size: 15px;
     font-weight: 600;
     padding-top: 1%;
     justify-content: center;
+    border-top: 1px solid var(--black-a10);
     gap: 2.1%;
 }
 
