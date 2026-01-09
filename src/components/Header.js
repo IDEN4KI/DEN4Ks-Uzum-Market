@@ -86,7 +86,7 @@ export const Header = `
         <div id="header-middle-right">
           <div id="login-btn"> 
             <img id="icon" src="public/icons/free-icon-user-icon-4360835.png" alt="login">
-            <a href="#">Войти</a>
+            <a href="profile.html">Войти</a>
           </div>
           <div id="favorite-btn">
             <img id="icon" src="public/icons/free-icon-favorite-13426236.png" alt="login">

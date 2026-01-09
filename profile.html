@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="public/icons/market-logo.png" />
+    <link rel="stylesheet" href="./src/styles/colors.css">
+    <link rel="stylesheet" href="./src/styles/salesman.css">
+    <link rel="stylesheet" href="./src/styles/profile.css">
+    <title>DEN4K market Profile</title>
+</head>
+
+<body>
+    <div id="main-sales"></div>
+
+    <div id="myOrders-wrapper">
+        <h2 id="myOrders-name">Пользователь</h2>
+        <section id="myOrders">
+            <div id="myOrders-left">
+                <ul id="myOrders-list">
+                    <li class=" myOrders-item-notmain2">Заказы</li>
+                    <a href="rating.html">
+                        <li class="myOrders-item-notmain1">Отзывы</li>
+                    </a>
+                    <a href="profile.html">
+                        <li class="myOrders-item-main">Профиль</li>
+                    </a>
+                    <a href="openPVZ.html">
+                        <li class="myOrders-item-notmain3">Социальные промокоды</li>
+                    </a>
+                </ul>
+            </div>
+
+           
+
+            <div id="myOrders-right">
+                <h2 id="mydata">Мои данные</h2>
+
+                <form class="form" id="profileForm">
+                    <div class="row">
+                        <div class="field">
+                            <span>Фамилия *</span>
+                            <input type="text" id="lastName" required />
+                        </div>
+                        <div class="field">
+                            <span>Имя *</span>
+                            <input type="text" id="firstName" required />
+                        </div>
+                        <div class="field">
+                            <span>Отчество</span>
+                            <input type="text" id="middleName" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <span>Дата рождения</span>
+                            <input type="date" id="birthDate" />
+                        </div>
+
+                        <div class="field">
+                            <span>Пол</span>
+                            <div class="gender">
+                                <button type="button" data-gender="male">Мужской</button>
+                                <button type="button" data-gender="female">Женский</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <span>Электронная почта *</span>
+                            <input type="email" id="email" required />
+                        </div>
+                        <div class="field">
+                            <span>Номер телефона *</span>
+                            <input type="tel" id="phone"   placeholder="+998 (__) ___-__-__" maxlength="19" required />
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button"  id="logout">Выйти из системы</button>
+
+                        <div class="right">
+                            <button type="reset" class="cancel">Отменить</button>
+                            <button type="submit" class="save">Сохранить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-top">
+        <div id="footer-div">
+            <span>О нас</span>
+
+            <a href="pvz.html">Пункты выдачи</a>
+            <a href="vakansii.html">Вакансии</a>
+        </div>
+
+        <div id="footer-div">
+            <span>Пользователям</span>
+
+            <a href="#">Связаться с нами</a>
+            <a href="#">Вопрос - Ответ</a>
+        </div>
+
+        <div id="footer-div">
+            <span>Для предпринимателей</span>
+
+            <a href="becomeSalesman.html">Продавайте на DEN4K</a>
+            <a href="becomeSalesman.html">Вход для продавцов</a>
+            <a href="becomeSalesman.html">Открыть пункт выдачи</a>
+        </div>
+
+        <div id="footer-div">
+            <div id="footer-div4-top">
+                <img id="qr-code" src="public/icons/Screenshot_7.jpg" alt="qr-code">
+                <div id="ya-xz">
+                    <span id="blyat">Покупать удобнее в <br> приложении</span>
+                    <span>Наведите камеру и скачайте <br>бесплатное приложение в App <br>Store и Google Play</span>
+                </div>
+            </div>
+            <span>DEN4K в соцсетях</span>
+            <div id="footer-div4-bottom">
+                <img id="footer-icon" src="public/icons/Screenshot_1-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_3-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_4-Photoroom.png" alt="">
+                <img id="footer-icon" src="public/icons/Screenshot_5-Photoroom.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer-bottom">
+        <a class="footer-link" href="#">Соглашение о конфиденциальности</a>
+        <a class="footer-link" href="#">Пользовательское соглашение</a>
+        <a class="footer-link" href="#">Положение по обработке персональных данных</a>
+        <span id="footer-span">2026 © ИП ООО «DEN4K MARKET». ИНН 335110733. Все права защищены»</span>
+    </footer>
+
+    <script type="module">
+        import { Header } from "./src/components/Header"
+        document.getElementById("main-sales").innerHTML = Header
+    </script>
+
+    <script type="module" src="/src/scripts/profile.js"></script>
+
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="public/icons/market-logo.png" />
     <link rel="stylesheet" href="./src/styles/colors.css">
     <link rel="stylesheet" href="./src/styles/salesman.css">
-    <link rel="stylesheet" href="./src/styles/myOrders.css">
+    <link rel="stylesheet" href="./src/styles/rating.css">
     <title>DEN4K market My orders</title>
 </head>
 
@@ -20,10 +20,12 @@
             <div id="myOrders-left">
                 <ul id="myOrders-list">
                     <a href="myOrders.html">
-                        <li class="myOrders-item-main">Заказы</li>
+                        <li class="myOrders-item-notmain1">Заказы</li>
                     </a>
-                    <li class="myOrders-item-notmain1">Отзывы</li>
-                    <li class="myOrders-item-notmain2">Профиль</li>
+                    <li class=" myOrders-item-main">Отзывы</li>
+                    <a href="profile.html">
+                        <li class="myOrders-item-notmain2">Профиль</li>
+                    </a>
                     <a href="openPVZ.html">
                         <li class="myOrders-item-notmain3">Социальные промокоды</li>
                     </a>
@@ -31,26 +33,23 @@
             </div>
 
 
-
-
             <div id="myOrders-right">
+                <h2 id="my-rating">Мои отзывы</h2>
                 <div id="myOrders-right-top">
-                    <div class="myOrders-right-button1">Все заказы</div>
-                    <div class="myOrders-right-button-active">Активные</div>
+                    <div class="myOrders-right-button1">Ждут оценку</div>
+                    <div class="myOrders-right-button-active">Уже оценили</div>
                 </div>
 
                 <div id="myOrders-right-main">
-                    <h1 id="myOrders-right-main-text">Здесь пусто</h1>
+                    <img id="kotik" src="public/images/kotikt_2.jpg" alt="kotik">
                     <div id="span-spanich">
-                        <span class="myOrders-right-main-span">У вас отсутствуют активные заказы!</span>
-                        <span class="myOrders-right-main-span">Воспользуйтесь поиском, чтобы найти всё что нужно.</span>
+                        <span class="myOrders-right-main-span1">Здесь появятся ваши отзывы о покупках</span>
+                        <span class="myOrders-right-main-span">Делитесь впечатлениями — это поможет сделать выбор другим
+                            покупателям</span>
                     </div>
 
                     <a id="liink" href="index.html">
-                        <div id="myOrders-right-main-button1">Начать покупки</div>
-                    </a>
-                    <a id="liink" href="index.html">
-                        <div id="myOrders-right-main-button2">Вернуться на главную</div>
+                        <div id="myOrders-right-main-button1">Перейти на главную</div>
                     </a>
                 </div>
             </div>
@@ -110,7 +109,7 @@
         document.getElementById("main-sales").innerHTML = Header
     </script>
 
-    <script type="module" src="/src/scripts/myOrders.js"></script>
+    <script type="module" src="/src/scripts/rating.js"></script>
 
 </body>
 
