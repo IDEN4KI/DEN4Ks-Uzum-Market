@@ -15,7 +15,7 @@ genderButtons.forEach(btn => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+
 
   const data = {
     lastName: lastName.value,
@@ -29,6 +29,8 @@ form.addEventListener("submit", (e) => {
 
   localStorage.setItem("userProfile", JSON.stringify(data));
   alert("Данные сохранены");
+  location.reload()
+
 });
 
 const savedData = JSON.parse(localStorage.getItem("userProfile"));
@@ -47,6 +49,9 @@ if (savedData) {
       .querySelector(`[data-gender="${savedData.gender}"]`)
       ?.classList.add("active");
   }
+
+  let myname = document.getElementById("myname")
+  myname.textContent = `${savedData.firstName}`
 }
 
 document.getElementById("logout").addEventListener("click", () => {
@@ -95,3 +100,9 @@ form.addEventListener("submit", () => {
     return;
   }
 });
+
+const divchik = document.getElementById("divchik")
+divchik.addEventListener("click" , () => {
+  alert("Перевод временно недоступен")
+})
+

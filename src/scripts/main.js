@@ -303,20 +303,20 @@ document.addEventListener("click", (e) => {
   e.target.classList.add("active");
 });
 
-  const dropdown = document.querySelector('.dropdownMain');
-  const btn = document.querySelector('.dropdown-btnMain');
-  const items = document.querySelectorAll('.dropdown-listMain li');
+const dropdown = document.querySelector('.dropdownMain');
+const btn = document.querySelector('.dropdown-btnMain');
+const items = document.querySelectorAll('.dropdown-listMain li');
 
-  btn.addEventListener('click', () => {
-    dropdown.classList.toggle('active');
-  });
+btn.addEventListener('click', () => {
+  dropdown.classList.toggle('active');
+});
 
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      btn.firstChild.textContent = item.textContent;
-      dropdown.classList.remove('active');
-    });
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    btn.firstChild.textContent = item.textContent;
+    dropdown.classList.remove('active');
   });
+});
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination, Autoplay],
@@ -488,6 +488,21 @@ async function getUserInfo() {
   }
 }
 
+const savedData = JSON.parse(localStorage.getItem("userProfile"));
+const divchik = document.getElementById("divchik")
+
+let myname = document.getElementById("myname")
+
+
+if (savedData === null) {
+  myname.textContent = `Войти`
+}else{
+  myname.textContent = `${savedData.firstName}`
+}
+
+divchik.addEventListener("click" , () => {
+  alert("Перевод временно недоступен")
+})
 
 getData()
 healthcheck()

@@ -55,20 +55,20 @@ if (favorites.length === 0) {
   `
 }
 
-  const dropdown = document.querySelector('.dropdownMain');
-  const btn = document.querySelector('.dropdown-btnMain');
-  const items = document.querySelectorAll('.dropdown-listMain li');
+const dropdown = document.querySelector('.dropdownMain');
+const btn = document.querySelector('.dropdown-btnMain');
+const items = document.querySelectorAll('.dropdown-listMain li');
 
-  btn.addEventListener('click', () => {
-    dropdown.classList.toggle('active');
-  });
+btn.addEventListener('click', () => {
+  dropdown.classList.toggle('active');
+});
 
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      btn.firstChild.textContent = item.textContent;
-      dropdown.classList.remove('active');
-    });
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    btn.firstChild.textContent = item.textContent;
+    dropdown.classList.remove('active');
   });
+});
 
 
 
@@ -116,4 +116,18 @@ document.addEventListener("click", (e) => {
   card.remove();
 });
 
+const savedData = JSON.parse(localStorage.getItem("userProfile"));
 
+let myname = document.getElementById("myname")
+
+const divchik = document.getElementById("divchik")
+
+if (savedData === null) {
+  myname.textContent = `Войти`
+}else{
+  myname.textContent = `${savedData.firstName}`
+}
+
+divchik.addEventListener("click" , () => {
+  alert("Перевод временно недоступен")
+})

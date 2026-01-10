@@ -38,21 +38,21 @@
                 </div>
 
 
-                
+
             </div>
             <p id="vakansii-text">
-                    Профили работ в которых вы можете найти, то, что вам подходит: <br>
-                     - Бухгалтерия и финансы <br>
-                     - Доставка Uzum Market <br>
-                     - Административный персонал <br>
-                     - Складская логистика <br>
-                     - Контактный центр <br>
-                     - Управление персоналом <br>
-                    Если у нас пока не открыта вакансия Вашей мечты - присылайте свое резюме в резерв, <br> удобным для Вас
-                    способом: <br>
-                    Telegram: <a href="#">@HR_UZUM</a> <br>
-                    Email: <a href="#">hr-market@uzum.com</a>
-                </p>
+                Профили работ в которых вы можете найти, то, что вам подходит: <br>
+                - Бухгалтерия и финансы <br>
+                - Доставка Uzum Market <br>
+                - Административный персонал <br>
+                - Складская логистика <br>
+                - Контактный центр <br>
+                - Управление персоналом <br>
+                Если у нас пока не открыта вакансия Вашей мечты - присылайте свое резюме в резерв, <br> удобным для Вас
+                способом: <br>
+                Telegram: <a href="#">@HR_UZUM</a> <br>
+                Email: <a href="#">hr-market@uzum.com</a>
+            </p>
 
         </section>
     </div>
@@ -109,6 +109,21 @@
         import { Header } from "./src/components/Header"
 
         document.getElementById("main-sales").innerHTML = Header
+
+        const savedData = JSON.parse(localStorage.getItem("userProfile"));
+
+        const divchik = document.getElementById("divchik")
+        let myname = document.getElementById("myname")
+
+        if (savedData === null) {
+            myname.textContent = `Войти`
+        } else {
+            myname.textContent = `${savedData.firstName}`
+        }
+
+        divchik.addEventListener("click", () => {
+            alert("Перевод временно недоступен")
+        })
     </script>
 </body>
 
