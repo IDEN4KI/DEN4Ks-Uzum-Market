@@ -37,36 +37,67 @@ app.innerHTML = `
     <div class="swiper">
 
     <div class="swiper-wrapper">
+    
       <div class="swiper-slide"><img src="public/images/Screenshot_32-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_31-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_29-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_28-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_27-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_26.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_25-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_24.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_23.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_22-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_21-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_20.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_19-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_18.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_17-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_16.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_15.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_14.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_13.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_12.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_11.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_10.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_30.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_9-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_8.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_7.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_6-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_5-Photoroom.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshoot_4.jpg"></div>
+
       <div class="swiper-slide"><img src="public/images/Screenshot_3-Photoroom.jpg"></div>
+      
       <div class="swiper-slide"><img src="public/images/Screenshot_1.jpg"></div>
     </div>
 
@@ -80,25 +111,33 @@ app.innerHTML = `
   </div>
 
   <section id="under-swiper">
+   <a href="product.html">
     <div id="under-swiper-section">
       <img id="im" src="public/icons/free-icon-teddy-bear-620744.png" alt="teddy">
-      <a id="aaaa" href="#">Детский мир</a>
+      <span id="aaaa" href="product.html">Детский мир</span>
     </div>
+    </a>
 
+    <a href="product.html">
     <div id="under-swiper-section">
       <img id="im" src="public/icons/free-icon-tick-11708440.png" alt="prises">
-      <a id="aaaa" href="#">Гарантия низких цен</a>
+      <span id="aaaa" href="product.html">Гарантия низких цен</span>
     </div>
+    </a>
 
+    <a href="product.html">
     <div id="under-swiper-section">
       <img id="im" src="public/icons/free-icon-summer-clothing-7707925.png" alt="clouth">
-      <a id="aaaa" href="#">Модный базар</a>
+      <span id="aaaa" href="product.html">Модный базар</span>
     </div>
+    </a>
 
+    <a href="product.html">
     <div id="under-swiper-section">
       <img id="im" src="public/icons/free-icon-christmas-tree-3699499.png" alt="elka">
-      <a id="aaaa" href="#">Новый год</a>
+      <span id="aaaa" href="product.html">Новый год</span>
     </div>
+    </a>
   </section>
 
     <section id="recomended">

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="public/icons/market-logo.png" />
+    <link rel="stylesheet" href="./src/styles/colors.css">
+    <link rel="stylesheet" href="./src/styles/salesman.css">
+    <title>DEN4K market open-pvz</title>
+</head>
+
+<body>
+    <div id="main-sales"></div>
+
+
+    <div id="sales-content">
+        <img id="sign" src="public/images/Без нsdазвания.png" alt="">
+        <h1 id="sign-text">Данный товар временно недоступен! </h1>
+        <h1 id="sign-text">Следите за обновлениями :)</h1>
+        <a id="link-button" href="index.html">
+            <span id="sign-link" href="index.html">Вернуться на главную страницу</span>
+        </a>
+    </div>
+
+    <script type="module">
+        import { Header } from "./src/components/Header"
+
+
+        document.getElementById("main-sales").innerHTML = Header
+    </script>
+</body>
+
+</html>

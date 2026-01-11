@@ -70,10 +70,10 @@ export const Header = `
           <a href="index.html">
             <img href="index.html" src="public/images/Uzum-Market-Logo-Vector.svg-.png" alt="logo" id="logo">
           </a>
-          <div id="midale">
+          <a href="openPVZ.html" id="midale">
             <img src="public/icons/Screenshot_3.png" alt="ya xz" id="midale-icon">
             <button id="catalog-btn">Каталог</button>
-          </div>
+          </a>
         </div>
 
         <div id="header-middle-center">
@@ -84,67 +84,69 @@ export const Header = `
         </div>
 
         <div id="header-middle-right">
-          <div id="login-btn"> 
+          <a href="profile.html" id="login-btn"> 
             <img id="icon" src="public/icons/free-icon-user-icon-4360835.png" alt="login">
-            <a id="myname" href="profile.html">Войти</a>
-          </div>
-          <div id="favorite-btn">
+            <span id="myname" >Войти</span>
+          </a>
+          
+          <a href="favorite.html" id="favorite-btn">
             <img id="icon" src="public/icons/free-icon-favorite-13426236.png" alt="login">
-            <a href="favorite.html">Избранное</a>
-          </div>
-          <div id="cart-btn">
+            <span >Избранное</span>
+          </a>
+
+          <a href="cart.html" id="cart-btn">
             <img id="icon" src="public/icons/free-icon-shopping-bag-icon-17287783.png" alt="login">
-            <a href="cart.html">Корзина</a>
-          </div>
+            <span >Корзина</span>
+          </a>
         </div>
       </section>
 
       <ul id="header-bottom">
         <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-flame-4535728.png" alt="fire">
-          <a id="aa" href="#">Товары недели</a>
+          <a id="aa" href="openPVZ.html">Товары недели</a>
         </li>
 
         <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-jacket-5987724.png" alt="collection">
-          <a id="aa" href="#">Зимняя коллекция</a>
+          <a id="aa" href="openPVZ.html">Зимняя коллекция</a>
         </li>
 
         <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-lipstick-8167676.png" alt="fashion">
-          <a id="aa" href="#">Ваша красота</a>
+          <a id="aa" href="openPVZ.html">Ваша красота</a>
         </li>
 
         <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-spanish-guitar-262421.png" alt="hobby">
-          <a id="aa" href="#">Хобби и творчество</a>
+          <a id="aa" href="openPVZ.html">Хобби и творчество</a>
         </li>
 
         <li id="categories">
           <img id="header-bottom-icon" src="public/icons/free-icon-phone-11970327.png" alt="phones">
-          <a id="aa" href="#">Смартфоны</a>
+          <a id="aa" href="openPVZ.html">Смартфоны</a>
         </li>
 
         <li id="categories2">
           <div id="poloska-nevedimka"></div>
-          <a id="aaa" href="#">Туризм,рыбалка и охота</a>
+          <a id="aaa" href="openPVZ.html">Туризм,рыбалка и охота</a>
           <div id="poloska"></div>
         </li>
 
         <li id="categories2">
           <div id="poloska-nevedimka"></div>
-          <a id="aaa" href="#">Электроника</a>
+          <a id="aaa" href="openPVZ.html">Электроника</a>
           <div id="poloska"></div>
         </li>
 
         <li id="categories2">
           <div id="poloska-nevedimka"></div>
-          <a id="aaa" href="#">Бытовая техника</a>
+          <a id="aaa" href="openPVZ.html">Бытовая техника</a>
           <div id="poloska"></div>
         </li>
 
         <li id="categories3">
-          <a id="aaa" href="#">Ещё</a>
+          <a id="aaa" href="openPVZ.html">Ещё</a>
           <img id="arrow2" src="public/icons/free-icon-down-arrow-748063.png" alt="arrow">
         </li>
       </ul>
@@ -565,3 +567,4 @@ export const Header = `
       
     </style>
 `;
+
