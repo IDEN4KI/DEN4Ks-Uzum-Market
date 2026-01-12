@@ -19,8 +19,6 @@ const data = await res.json()
 
 const recomendedList = document.getElementById("recomended-section");
 
-
-
 for (let i = 7; i < 12; i++) {
   const price = data[i].price / 10
   ProductsSection1 += `

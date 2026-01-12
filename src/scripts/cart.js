@@ -6,16 +6,16 @@ let myname = document.getElementById("myname")
 
 if (savedData === null) {
   myname.textContent = `Войти`
-}else{
+} else {
   myname.textContent = `${savedData.firstName}`
 }
 
-divchik.addEventListener("click" , () => {
+divchik.addEventListener("click", () => {
   alert("Перевод временно недоступен")
 })
 
 let cartContent = document.getElementById("cart-main-section")
-let cart = []
+let cart = [1]
 
 if (cart.length === 0) {
   cartContent.innerHTML = `
@@ -32,3 +32,5 @@ if (cart.length === 0) {
   </div>  
   `
 }
+
+
