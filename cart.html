@@ -15,15 +15,15 @@
 
     <section id="cart-main-section">
         <div id="title-text">
-            <h2 id="yoursCart">Ваша корзина, <strong>1 товар</strong></h2>
+            <div id="chtoto">
+                <h2 id="yoursCart">Ваша корзина,</h2>
+                <span id="uga-buga">...</span>
+            </div>
+
         </div>
 
         <div id="cartContent">
             <div id="cart-Content-Left">
-                <div id="checkbox-Container">
-                    <input class="checkbox" type="checkbox">
-                    <span>Выбрать все</span>
-                </div>
             </div>
 
             <div id="cart-Content-Right">
@@ -55,13 +55,13 @@
                     <h3>Ваш заказ</h3>
                     <div id="cart-Content-Right-bottom1">
                         <div id="cart-list-top">
-                            <span id="cart-list-item1">Товары (*):</span>
-                            <span id="cart-list-item2">* сум</span>
+                            <span id="cart-list-item1">Товары (0):</span>
+                            <span id="cart-list-item2">0 сум</span>
                         </div>
 
                         <div id="cart-list-bottom">
                             <span id="cart-list-item3">Итого:</span>
-                            <span id="cart-list-item4">* сум</span>
+                            <span id="cart-list-item4">0 сум</span>
                         </div>
                     </div>
                     <button id="Buy-button">Оформить заказ</button>
@@ -126,6 +126,7 @@
         document.getElementById("main-sales").innerHTML = Header
     </script>
     <script type="module" src="./src/scripts/cart.js"></script>
+
 </body>
 
 </html>

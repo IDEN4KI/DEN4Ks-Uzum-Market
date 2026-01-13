@@ -215,10 +215,12 @@
 .item-button-text {
   color: white;
   font-weight: 500;
+  pointer-events: none;
 }
 
 .item-button-img {
   width: 8%;
+  pointer-events: none;
 }
 
 .item-favorite-img {
@@ -526,4 +528,9 @@
 
 .dropdownMain.active .dropdown-listMain {
   display: block;
+}
+
+.colors{
+  font-size: 1px;
+  color: white;
 }

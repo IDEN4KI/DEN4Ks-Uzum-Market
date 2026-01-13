@@ -38,6 +38,8 @@ for (let i = 7; i < 12; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -64,6 +66,8 @@ for (let i = 7; i < 12; i++) {
         <span class="item-rating">${data[i].rating}</span>
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
+
+      <div class="colors">${data[i].colors}</div>
 
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
@@ -94,6 +98,8 @@ for (let i = 25; i < 30; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -120,6 +126,8 @@ for (let i = 13; i < 18; i++) {
         <span class="item-rating">${data[i].rating}</span>
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
+
+      <div class="colors">${data[i].colors}</div>
 
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
@@ -148,6 +156,8 @@ for (let i = 45; i < 50; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -165,6 +175,8 @@ for (let i = 40; i < 45; i++) {
         <img class="item-img" src="${data[i].media[0]}" alt="item-img">
        </div>
 
+       <div class="colors">${data[i].colors}</div>
+
       <span class="item-price-card">${data[i].price}</span>
       <span class="item-price-withoutcard">${data[i].price + 100}</span>
       <div class="installment-plan">
@@ -176,6 +188,8 @@ for (let i = 40; i < 45; i++) {
         <span class="item-rating">${data[i].rating}</span>
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
+
+      <div class="colors">${data[i].colors}</div>
 
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
@@ -204,6 +218,8 @@ for (let i = 11; i < 16; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -230,6 +246,8 @@ for (let i = 16; i < 21; i++) {
         <span class="item-rating">${data[i].rating}</span>
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
+
+      <div class="colors">${data[i].colors}</div>
 
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
@@ -258,6 +276,8 @@ for (let i = 19; i < 24; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -284,6 +304,8 @@ for (let i = 40; i < 45; i++) {
         <span class="item-rating">${data[i].rating}</span>
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
+
+      <div class="colors">${data[i].colors}</div>
 
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
@@ -312,6 +334,8 @@ for (let i = 30; i < 35; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -339,6 +363,8 @@ for (let i = 35; i < 40; i++) {
         <span class="item-amount-reviews">(${Math.round(price.toFixed(0) / 100)} отзывов)</span>
       </div>
 
+      <div class="colors">${data[i].colors}</div>
+
       <div class="item-button">
         <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png" alt="addCart">
         <span class="item-button-text">В корзину</span>
@@ -348,7 +374,7 @@ for (let i = 35; i < 40; i++) {
 }
 
 document.addEventListener("click", (e) => {
-  console.log("CLICK", e.target);
+  console.log("ЭТО:", e.target);
   const fav = e.target.closest(".item-favorite-img");
   if (!fav) return;
 
@@ -367,29 +393,11 @@ document.addEventListener("click", (e) => {
     const card = e.target.closest("#recomended-section-item");
     if (!card) return;
 
-
     const id = card.dataset.id;
   }
 
-  if (!e.target.classList.contains("item-favorite-img")) return;
-
-  const card = e.target.closest(".recomended-section-item");
-  if (!card) return;
-
-  const product = {
-    id: card.dataset.id,
-    html: card.outerHTML
-  };
-
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  if (favorites.some(item => item.id === product.id)) return;
-
-  favorites.push(product);
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-});
-
-document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("item-favorite-img")) return;
 
   const card = e.target.closest(".recomended-section-item");
@@ -406,12 +414,50 @@ document.addEventListener("click", (e) => {
     reviews: card.querySelector(".reviews-block span:nth-child(3)")?.textContent || ""
   };
 
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
   if (favorites.some(item => item.id === product.id)) return;
 
   favorites.push(product);
   localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  e.target.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  console.log("ЭТО:", e.target);
+  const cart = e.target.closest(".item-button");
+  if (!cart) return;
+
+  if (e.target.classList.contains("item-button")) {
+
+    const card = e.target.closest("#recomended-section-item");
+    if (!card) return;
+
+    const id = card.dataset.id;
+  }
+
+  let myCart = JSON.parse(localStorage.getItem("myCart")) || [];
+
+  if (!e.target.classList.contains("item-button")) return;
+
+  const card = e.target.closest(".recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    img: card.querySelector(".item-img")?.src || "",
+    title: card.querySelector(".item-title")?.textContent || "",
+    price: card.querySelector(".item-price-card")?.textContent || "",
+    priceWithoutCard: Number(card.querySelector(".item-price-card")?.textContent || 0) + 100,
+    installment: card.querySelector(".installment-plan span")?.textContent || "",
+    rating: card.querySelector(".reviews-block span")?.textContent || "",
+    reviews: card.querySelector(".reviews-block span:nth-child(3)")?.textContent || "",
+    colors: card.querySelector(".colors")?.textContent || "",
+  };
+
+  if (myCart.some(item => item.id === product.id)) return;
+
+  myCart.push(product);
+  localStorage.setItem("myCart", JSON.stringify(myCart));
 
   e.target.classList.add("active");
 });

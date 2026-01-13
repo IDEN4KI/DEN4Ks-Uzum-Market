@@ -1,8 +1,23 @@
+const res = await fetch(
+  `${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/main/products`
+);
+const data = await res.json()
+
+console.log(data);
+
+
 const savedData = JSON.parse(localStorage.getItem("userProfile"));
 const divchik = document.getElementById("divchik")
+let cartContainer = document.getElementById("cart-Content-Left")
+const myCart = JSON.parse(localStorage.getItem("myCart")) || [];
+let ugaBuga = document.getElementById("uga-buga")
 
+let cartContent = document.getElementById("cart-main-section")
 let myname = document.getElementById("myname")
 
+
+
+ugaBuga.innerHTML = `Товаров: ${myCart.length}`
 
 if (savedData === null) {
   myname.textContent = `Войти`
@@ -14,10 +29,7 @@ divchik.addEventListener("click", () => {
   alert("Перевод временно недоступен")
 })
 
-let cartContent = document.getElementById("cart-main-section")
-let cart = [1]
-
-if (cart.length === 0) {
+if (myCart.length === 0) {
   cartContent.innerHTML = `
   <div id="dimon">
     <img id="kotik" src="public/images/kotikt_2.jpg" alt="kotik">
@@ -33,4 +45,97 @@ if (cart.length === 0) {
   `
 }
 
+myCart.forEach(item => {
+  const price = item.price / 10
+  cartContainer.insertAdjacentHTML("beforeend", `
+    <div id="cart-item" data-id="${item.id}">
+
+      <h3>Доставка DEN4K Market</h3>
+
+      <h2>Доставим завтра</h2>
+
+      <div id="cart-item-itema"> 
+
+        <img class="item-img" src="${item.img}">
+
+        <section id="item-block">
+          <div id="item-block-top">
+             <span class="item-title">${item.title}</span>
+
+             <button id="delete">Удалить товар</button>
+          </div>
+          
+          <div id="item-block-bottom">
+            <div id="info">
+              <div class="reviews-block">
+                <span id="rating">Рейтинг:</span>
+                <span>${item.rating}</span>
+                <span>(${Number(Math.round(price.toFixed(0) / 100))} отзывов)</span>
+              </div>
+
+              <div class="colors"><strong>Цвет:</strong> ${item.colors}</div>
+            </div>
+
+            <div id="console">
+              <span class="minus">-</span>
+              <span class="number">1</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div id="prices">
+              <span class="item-price-card">${item.price} сум</span>
+
+              <span class="item-price-withoutcard">без карты DEN4K ${Number(item.price) + 3000} сум</span>
+            </div> 
+          </div>  
+        </section>
+      </div>
+    </div>
+  `);
+});
+
+function getProduct() {
+  return JSON.parse(localStorage.getItem("myCart")) || [];
+}
+
+function saveProduct(myCart) {
+  localStorage.setItem("myCart", JSON.stringify(myCart));
+}
+
+function isProduct(id) {
+  return getProduct().some(item => item.id === id);
+}
+
+function removeProduct(id) {
+  const myCart = getProduct().filter(item => item.id !== id);
+  saveProduct(myCart);
+  location.reload()
+  if (myCart.length === 0) {
+    location.reload()
+  }
+}
+
+document.addEventListener("click", (e) => {
+
+  const remove = e.target.closest("#delete");
+  if (!remove) return;
+
+  const cart = remove.closest("#cart-item");
+  if (!cart) return;
+
+  const id = cart.dataset.id;
+
+  removeProduct(id);
+  cart.remove();
+});
+
+let number = document.querySelector(".number")
+document.addEventListener("click", (e) => {
+
+  const plus = e.target.closest(".plus");
+  if (!plus) return;
+
+  number.innerHTML = `${Number(number.id)+1}`
+
+});
 

@@ -327,7 +327,8 @@ document.addEventListener("click", (e) => {
     img: card.querySelector(".item-img").src,
     title: card.querySelector(".item-title").textContent,
     price: card.querySelector(".item-price-card").textContent,
-    rating: card.querySelector(".item-rating")?.textContent || ""
+    rating: card.querySelector(".item-rating")?.textContent || "",
+    colors: card.querySelector(".colors")?.textContent || "",
   };
 
   let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
@@ -337,6 +338,32 @@ document.addEventListener("click", (e) => {
 
   favorites.push(product);
   localStorage.setItem("favorites", JSON.stringify(favorites));
+
+
+  e.target.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("item-button")) return;
+
+  const card = e.target.closest("#recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    img: card.querySelector(".item-img").src,
+    title: card.querySelector(".item-title").textContent,
+    price: card.querySelector(".item-price-card").textContent,
+    rating: card.querySelector(".item-rating")?.textContent || "",
+    colors: card.querySelector(".colors")?.textContent || "",
+  };
+
+  let myCart = JSON.parse(localStorage.getItem("myCart")) || [];
+
+  if (myCart.some(item => item.id === product.id)) return;
+
+  myCart.push(product);
+  localStorage.setItem("myCart", JSON.stringify(myCart));
 
 
   e.target.classList.add("active");

@@ -425,3 +425,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.item-button span{
+  pointer-events: none;
+}
+
+.item-button img{
+  pointer-events: none;
+}
+
+.colors{
+  font-size: 1px;
+  color: white;
+}

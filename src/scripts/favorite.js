@@ -3,9 +3,6 @@ const res = await fetch(
 );
 const data = await res.json()
 
-import { removeFavorite } from "./favoritesService.js";
-
-
 const recomendedList = document.getElementById("recomended-section-favorite");
 const recomended = document.getElementById("recomended-favorite");
 const moijelania = document.getElementById("moijelania")
@@ -70,6 +67,25 @@ items.forEach(item => {
   });
 });
 
+function removeFavorite(id) {
+  const favorites = getFavorites().filter(item => item.id !== id);
+  saveFavorites(favorites);
+  if (favorites.length === 0) {
+    location.reload()
+  }
+}
+
+function getFavorites() {
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+function saveFavorites(favorites) {
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function isFavorite(id) {
+  return getFavorites().some(item => item.id === id);
+}
 
 
 favorites.forEach(item => {
@@ -94,6 +110,8 @@ favorites.forEach(item => {
         <span>${item.rating}</span>
         <span>(${Number(Math.round(price.toFixed(0) / 100))} отзывов)</span>
       </div>
+
+      <div class="colors">${item.colors}</div>
 
       <div class="item-button">
         <img src="public/icons/free-icon-add-to-cart-7541102.png">
@@ -124,10 +142,37 @@ const divchik = document.getElementById("divchik")
 
 if (savedData === null) {
   myname.textContent = `Войти`
-}else{
+} else {
   myname.textContent = `${savedData.firstName}`
 }
 
-divchik.addEventListener("click" , () => {
+divchik.addEventListener("click", () => {
   alert("Перевод временно недоступен")
 })
+
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("item-button")) return;
+
+  const card = e.target.closest("#recomended-section-item");
+  if (!card) return;
+
+  const product = {
+    id: card.dataset.id,
+    img: card.querySelector(".item-img").src,
+    title: card.querySelector(".item-title").textContent,
+    price: card.querySelector(".item-price-card").textContent,
+    rating: card.querySelector(".item-rating")?.textContent || "",
+    colors: card.querySelector(".colors")?.textContent || "",
+  };
+
+  let myCart = JSON.parse(localStorage.getItem("myCart")) || [];
+
+  if (myCart.some(item => item.id === product.id)) return;
+
+  myCart.push(product);
+  localStorage.setItem("myCart", JSON.stringify(myCart));
+
+
+  e.target.classList.add("active");
+});
+
