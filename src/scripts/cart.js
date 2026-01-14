@@ -14,10 +14,12 @@ let ugaBuga = document.getElementById("uga-buga")
 
 let cartContent = document.getElementById("cart-main-section")
 let myname = document.getElementById("myname")
+let cartlistitem1 = document.getElementById("cart-list-item1")
 
 
 
-ugaBuga.innerHTML = `Товаров: ${myCart.length}`
+// ugaBuga.innerHTML = `Товаров: ${myCart.length}`
+// cartlistitem1.innerHTML = `Товары (${myCart.length}):`
 
 if (savedData === null) {
   myname.textContent = `Войти`
@@ -94,6 +96,40 @@ myCart.forEach(item => {
   `);
 });
 
+
+document.addEventListener("click", (e) => {
+  const remove = e.target.closest("#delete");
+  if (!remove) return;
+
+  const cart = remove.closest("#cart-item");
+  if (!cart) return;
+
+  const id = cart.dataset.id;
+
+  removeProduct(id);
+  cart.remove();
+});
+
+function clearCart() {
+  localStorage.removeItem("myCart");
+
+  location.reload()
+
+  alert("Заказ успешно оформлен!");
+
+  
+}
+
+const buyButton = document.getElementById("Buy-button");
+
+buyButton.addEventListener("click", () => {
+  clearCart();
+});
+
+
+updateCartSummary();
+
+
 function getProduct() {
   return JSON.parse(localStorage.getItem("myCart")) || [];
 }
@@ -115,27 +151,63 @@ function removeProduct(id) {
   }
 }
 
-document.addEventListener("click", (e) => {
+cartContainer.addEventListener("click", (e) => {
 
-  const remove = e.target.closest("#delete");
-  if (!remove) return;
+  if (e.target.classList.contains("plus")) {
+    changeCount(e.target, 1);
+  }
 
-  const cart = remove.closest("#cart-item");
-  if (!cart) return;
 
-  const id = cart.dataset.id;
-
-  removeProduct(id);
-  cart.remove();
+  if (e.target.classList.contains("minus")) {
+    changeCount(e.target, -1);
+  }
 });
 
-let number = document.querySelector(".number")
-document.addEventListener("click", (e) => {
+function changeCount(target, delta) {
+  const cartItem = target.closest("#cart-item");
 
-  const plus = e.target.closest(".plus");
-  if (!plus) return;
+  const numberEl = cartItem.querySelector(".number");
+  const priceCardEl = cartItem.querySelector(".item-price-card");
+  const priceWithoutCardEl = cartItem.querySelector(".item-price-withoutcard");
 
-  number.innerHTML = `${Number(number.id)+1}`
+  let count = Number(numberEl.textContent);
 
-});
+  if (count + delta < 1) return;
 
+  const basePrice =
+    Number(priceCardEl.textContent.replace(/\D/g, "")) / count;
+
+  count += delta;
+  numberEl.textContent = count;
+
+  const newPrice = basePrice * count;
+
+  priceCardEl.textContent = `${newPrice} сум`;
+  priceWithoutCardEl.textContent = `без карты DEN4K ${newPrice + 3000} сум`;
+
+  updateCartSummary();
+}
+
+function updateCartSummary() {
+  const cartItems = document.querySelectorAll("#cart-item");
+
+  let totalPrice = 0;
+  let totalCount = 0;
+
+  cartItems.forEach(item => {
+    const priceEl = item.querySelector(".item-price-card");
+    const countEl = item.querySelector(".number");
+
+    const price = Number(priceEl.textContent.replace(/\D/g, ""));
+    const count = Number(countEl.textContent);
+
+    totalPrice += price;
+    totalCount += count;
+  });
+
+  document.getElementById("cart-list-item2").textContent = `${totalPrice} сум`;
+  document.getElementById("cart-list-item4").textContent = `${totalPrice} сум`;
+  document.getElementById("cart-list-item1").textContent = `Товары (${totalCount}):`;
+  document.getElementById("uga-buga").textContent = `Товаров:${totalCount}`;
+
+}

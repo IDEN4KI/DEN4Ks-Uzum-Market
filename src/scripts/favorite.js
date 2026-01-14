@@ -87,6 +87,17 @@ function isFavorite(id) {
   return getFavorites().some(item => item.id === id);
 }
 
+document.addEventListener("click", (e) => {
+  const item = e.target.closest("#recomended-section-item");
+  if (!item) return;
+
+  if (e.target.closest(".item-button")) return;
+   if (e.target.closest(".item-favorite-img")) return;
+
+  const id = item.dataset.id;
+
+  window.location.href = `product.html?id=${id}`;
+});
 
 favorites.forEach(item => {
   const price = item.price / 10
@@ -114,8 +125,8 @@ favorites.forEach(item => {
       <div class="colors">${item.colors}</div>
 
       <div class="item-button">
-        <img src="public/icons/free-icon-add-to-cart-7541102.png">
-        <span>В корзину</span>
+        <img class="item-button-img" src="public/icons/free-icon-add-to-cart-7541102.png">
+        <span class="item-button-text">В корзину</span>
       </div>
     </li>
   `);
@@ -149,6 +160,18 @@ if (savedData === null) {
 divchik.addEventListener("click", () => {
   alert("Перевод временно недоступен")
 })
+
+document.addEventListener("click", (e) => {
+  const button = e.target.closest(".item-button");
+  if (!button) return;
+
+  if (button.classList.contains("added")) return;
+
+  button.classList.add("added");
+
+  const text = button.querySelector(".item-button-text");
+  text.textContent = "Добавлено в корзину";
+}); 
 
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("item-button")) return;

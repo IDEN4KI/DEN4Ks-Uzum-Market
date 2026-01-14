@@ -343,6 +343,8 @@ document.addEventListener("click", (e) => {
   e.target.classList.add("active");
 });
 
+
+
 document.addEventListener("click", (e) => {
   if (!e.target.classList.contains("item-button")) return;
 
@@ -367,6 +369,21 @@ document.addEventListener("click", (e) => {
 
 
   e.target.classList.add("active");
+
+
+
+});
+
+document.addEventListener("click", (e) => {
+  const button = e.target.closest(".item-button");
+  if (!button) return;
+
+  if (button.classList.contains("added")) return;
+
+  button.classList.add("added");
+
+  const text = button.querySelector(".item-button-text");
+  text.textContent = "Добавлено в корзину";
 });
 
 const dropdown = document.querySelector('.dropdownMain');
@@ -382,6 +399,18 @@ items.forEach(item => {
     btn.firstChild.textContent = item.textContent;
     dropdown.classList.remove('active');
   });
+});
+
+document.addEventListener("click", (e) => {
+  const item = e.target.closest("#recomended-section-item");
+  if (!item) return;
+
+  if (e.target.closest(".item-button")) return;
+   if (e.target.closest(".item-favorite-img")) return;
+
+  const id = item.dataset.id;
+
+  window.location.href = `product.html?id=${id}`;
 });
 
 const swiper = new Swiper('.swiper', {

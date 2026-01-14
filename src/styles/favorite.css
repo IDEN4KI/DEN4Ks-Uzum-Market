@@ -438,3 +438,19 @@
   font-size: 1px;
   color: white;
 }
+
+.item-button.added {
+  background-color: var(--gray-90);
+  cursor: default;
+  pointer-events: none;
+}
+
+.item-button.added .item-button-img {
+  display: none;
+}
+
+.item-button.added .item-button-text {
+  color: var(--violet-55);
+  font-weight: 600;
+  font-size: 15px;
+}

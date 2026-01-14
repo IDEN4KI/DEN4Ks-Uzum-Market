@@ -19,7 +19,7 @@ const data = await res.json()
 
 const recomendedList = document.getElementById("recomended-section");
 
-for (let i = 7; i < 12; i++) {
+for (let i = 0; i < 5; i++) {
   const price = data[i].price / 10
   ProductsSection1 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -79,7 +79,7 @@ for (let i = 7; i < 12; i++) {
 
 
 
-for (let i = 25; i < 30; i++) {
+for (let i = 30; i < 35; i++) {
   const price = data[i].price / 10
   ProductsSection2 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -108,7 +108,7 @@ for (let i = 25; i < 30; i++) {
   `;
 }
 
-for (let i = 13; i < 18; i++) {
+for (let i = 15; i < 20; i++) {
   const price = data[i].price / 10
   ProductsSection3 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -137,7 +137,7 @@ for (let i = 13; i < 18; i++) {
   `;
 }
 
-for (let i = 45; i < 50; i++) {
+for (let i = 26; i < 31; i++) {
   const price = data[i].price / 10
   ProductsSection4 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -199,14 +199,14 @@ for (let i = 40; i < 45; i++) {
   `;
 }
 
-for (let i = 11; i < 16; i++) {
+for (let i = 5; i < 10; i++) {
   const price = data[i].price / 10
   ProductsSection6 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
       <img class="item-favorite-img" src="public/icons/free-icon-favoritere-13426236.png" alt="item-favorite-img">
       <img class="item-img" src="${data[i].media[0]}" alt="item-img">
 
-      <span class="item-price-card">${data[i].price - 50000}</span>
+      <span class="item-price-card">${data[i].price - 3000}</span>
       <span class="item-price-withoutcard">${data[i].price - 1000}</span>
       <div class="installment-plan">
         <span class="item-installment-plan">${price.toFixed(0)} сум/мес</span>
@@ -228,7 +228,7 @@ for (let i = 11; i < 16; i++) {
   `;
 }
 
-for (let i = 16; i < 21; i++) {
+for (let i = 18; i < 23; i++) {
   const price = data[i].price / 10
   ProductsSection7 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -257,7 +257,7 @@ for (let i = 16; i < 21; i++) {
   `;
 }
 
-for (let i = 19; i < 24; i++) {
+for (let i = 1; i < 6; i++) {
   const price = data[i].price / 10
   ProductsSection8 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -286,7 +286,7 @@ for (let i = 19; i < 24; i++) {
   `;
 }
 
-for (let i = 40; i < 45; i++) {
+for (let i = 9; i < 14; i++) {
   const price = data[i].price / 10
   ProductsSection9 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -315,7 +315,7 @@ for (let i = 40; i < 45; i++) {
   `;
 }
 
-for (let i = 30; i < 35; i++) {
+for (let i = 22; i < 28; i++) {
   const price = data[i].price / 10
   ProductsSection10 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -344,7 +344,7 @@ for (let i = 30; i < 35; i++) {
   `;
 }
 
-for (let i = 35; i < 40; i++) {
+for (let i = 20; i < 25; i++) {
   const price = data[i].price / 10
   ProductsSection11 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
