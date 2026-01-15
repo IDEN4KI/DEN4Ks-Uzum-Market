@@ -199,7 +199,7 @@ for (let i = 40; i < 45; i++) {
   `;
 }
 
-for (let i = 5; i < 10; i++) {
+for (let i = 12; i < 17; i++) {
   const price = data[i].price / 10
   ProductsSection6 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -315,7 +315,7 @@ for (let i = 9; i < 14; i++) {
   `;
 }
 
-for (let i = 22; i < 28; i++) {
+for (let i = 34; i < 39; i++) {
   const price = data[i].price / 10
   ProductsSection10 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
@@ -344,7 +344,7 @@ for (let i = 22; i < 28; i++) {
   `;
 }
 
-for (let i = 20; i < 25; i++) {
+for (let i = 30; i < 35; i++) {
   const price = data[i].price / 10
   ProductsSection11 += `
     <li id="recomended-section-item" data-id="${data[i].id}">
