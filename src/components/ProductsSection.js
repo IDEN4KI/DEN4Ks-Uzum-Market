@@ -199,6 +199,8 @@ for (let i = 40; i < 45; i++) {
   `;
 }
 
+// just smile :)
+
 for (let i = 12; i < 17; i++) {
   const price = data[i].price / 10
   ProductsSection6 += `
