@@ -202,6 +202,7 @@ for (let i = 40; i < 45; i++) {
 // just smile :)
 //another one update
 //trying to save ny combo
+//I will start working on the next day
 
 for (let i = 12; i < 17; i++) {
   const price = data[i].price / 10
