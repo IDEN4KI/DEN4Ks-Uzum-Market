@@ -47,7 +47,7 @@ export const Header = `
             </div>
           </div>
           <div id="header-top-right">
-            <a id="header-link-third" href="becomeSalesman.html">Стать продавцом</a>
+            <a id="header-link-third" href="openPVZ.html">Стать продавцом</a>
             <span id="palka">|</span>
             <a id="header-link-fouth" href="openPVZ.html">Открыть пункт выдачи</a>
             <span id="palka2">|</span>
