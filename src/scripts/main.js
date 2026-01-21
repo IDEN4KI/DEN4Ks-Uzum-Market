@@ -401,6 +401,8 @@ items.forEach(item => {
   });
 });
 
+//ya nichego ne sdelal , mne bilo len
+
 document.addEventListener("click", (e) => {
   const item = e.target.closest("#recomended-section-item");
   if (!item) return;

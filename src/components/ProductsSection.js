@@ -48,6 +48,7 @@ for (let i = 0; i < 5; i++) {
   `;
 }
 
+
 for (let i = 7; i < 12; i++) {
   const price = data[i].price / 10
   ProductsSectionFavorite += `
