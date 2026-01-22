@@ -402,6 +402,7 @@ items.forEach(item => {
 });
 
 //ya nichego ne sdelal , mne bilo len
+//i segodnya toje bilo len
 
 document.addEventListener("click", (e) => {
   const item = e.target.closest("#recomended-section-item");
